@@ -1,0 +1,38 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "python"],
+
+  // python config
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+
+  // snippets config
+  "snippets.ultisnips.directories":
+  [
+    "UltiSnips",
+    "~/.config/nvim/utils/snips"
+  ],
+
+  // explorer
+  "explorer.width": 30,
+  "explorer.file.showHiddenFiles": true,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.icon.enableVimDevIcons": true,
+  "explorer.previewAction.onHover": true,
+  "explorer.keyMappings.global": {
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit"
+  },
+
+  /*
+  "languageserver": {
+    "julia": {
+      "command": "/home/jake/opt/JuliaPro-1.5.2-1/Julia/bin/julia",
+      "args" : ["--startup-file=no", "--history-file=no", "-e",
+      "using LanguageServer;\n       using Pkg;\n       import StaticLint;\n       import SymbolServer;\n       env_path = dirname(Pkg.Types.Context().env.project_file);\n       debug = false;\n       server = LanguageServer.LanguageServerInstance(stdin, stdout, debug, env_path, \"\");\n       server.runlinter = true;\n       run(server);" ],
+      "filetypes": ["julia"]
+    }
+  },
+  */
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+  "coc.source.emoji.filetypes": ["markdown"]
+}

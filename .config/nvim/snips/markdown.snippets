@@ -1,0 +1,10 @@
+snippet meta(data)? "Markdown metadata front matter"
++++
+title = "${1:Title}"
+hascode = ${2:false}
+date = Date(`!v strftime("%Y")`, `!v strftime("%m")`, `!v strftime("%d")`)
++++
+@def tags = ["${3:blog}"]
+
+# $1
+endsnippet
