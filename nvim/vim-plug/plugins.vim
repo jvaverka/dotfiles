@@ -54,6 +54,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'voldikss/vim-floaterm'
     " Snippets to Code Faster
     Plug 'honza/vim-snippets'
+    " Goyo - get zen
+    Plug 'junegunn/goyo.vim'
+    " Vim-Markdown for convenience
+    Plug 'tpope/vim-markdown'
+    " Markdown Preview for enjoyable viewing
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
     " THEMES ======================================
     " OneDark theme
