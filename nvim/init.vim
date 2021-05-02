@@ -12,6 +12,7 @@ source $HOME/.config/nvim/plug-config/sneak.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/coc-snippets.vim
+source $HOME/.config/nvim/plug-config/vim-markdown.vim
 " Get general settings
 source $HOME/.config/nvim/general/paths.vim
 source $HOME/.config/nvim/general/settings.vim
