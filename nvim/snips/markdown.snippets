@@ -1,4 +1,4 @@
-snippet meta(data)? "Markdown metadata front matter"
+snippet franklinfm "franklin front matter" Ab
 +++
 title = "${1:Title}"
 hascode = ${2:false}
@@ -7,4 +7,17 @@ date = Date(`!v strftime("%Y")`, `!v strftime("%m")`, `!v strftime("%d")`)
 @def tags = ["${3:blog}"]
 
 # $1
+endsnippet
+
+snippet lookatmefm "lookatme front matter" Ab
+---
+title: ${1:Working Title}
+author: ${2:Jacob Vaverka}
+date: `!v strftime("%F")`
+---
+
+# ${3:Slide 1}
+
+#{4:some text}
+---
 endsnippet
