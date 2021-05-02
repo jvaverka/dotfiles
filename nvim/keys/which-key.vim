@@ -27,15 +27,30 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
-let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['m'] = [ ':MarkdownPreviewToggle'     , 'markdown preview' ]
 let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
 let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
-let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
-let g:which_key_map['A'] = [ ':CocAction'                 , 'code actions' ]
+let g:which_key_map['z'] = [ ':Goyo'                      , 'zen on' ]
+let g:which_key_map['Z'] = [ ':Goyo!'                     , 'zen off' ]
+
+" c is for Conqueror of Completion
+let g:which_key_map.c = {
+      \ 'name' : '+coc',
+      \ 'a' : [':CocAction'           , 'code actions'],
+      \ 'c' : [':CocList commands'    , 'commands'],
+      \ 'd' : [':CocList diagnostics' , 'diagnostics'],
+      \ 'e' : [':CocList extensions'  , 'extensions'],
+      \ 'f' : [':CocCommand explorer --preset floating' , 'floating file finder'],
+      \ 'j' : [':CocNext'             , 'default action for next item'],
+      \ 'k' : [':CocPrev'             , 'default action for prev item'],
+      \ 'l' : [':CocListResume'       , 'resume latest list'],
+      \ 'o' : [':CocList outline'     , 'outline'],
+      \ 'r' : [':CocCommand document.renameCurrentWord' , 'rename word'],
+      \ 'R' : [':CocCommand document.renameCurrentFile' , 'rename file'],
+      \ 's' : [':CocList -I symbols'  , 'search workspace symbols'],
+      \ }
 
 " s is for search
 let g:which_key_map.s = {
