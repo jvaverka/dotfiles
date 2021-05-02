@@ -84,3 +84,14 @@ let g:which_key_map.t = {
       \ 'h' : [':FloatermNew htop'                              , 'htop'],
       \ }
 
+" Grade a.k.a. spell check
+let g:which_key_map.g = {
+      \ 'name' : '+grade' ,
+      \ 'a' : ['zg'          , 'add'],
+      \ 'c' : ['z='          , 'correct'],
+      \ 'f' : ['1z='         , 'first suggestion'],
+      \ 'g' : [':set spell!' , 'toggle'],
+      \ 'n' : [']s'          , 'next'],
+      \ 'p' : ['[s'          , 'previous'],
+      \ 's' : ['<C-x>s'      , 'suggest'],
+      \ }
