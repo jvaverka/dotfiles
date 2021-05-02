@@ -37,7 +37,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter'
-    " FZF and Vim-Rooter
+    " Startify - awesome start menu
     Plug 'mhinz/vim-startify'
     " Git Integration
     Plug 'mhinz/vim-signify'
