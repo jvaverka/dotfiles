@@ -126,23 +126,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# a nice little greeting
-toilet "welcome back, jake" -f wideterm -F border -F gay
-fortune
-
-# get system stats for nerds on each new shell startup
-# neofetch
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/jake/.julia/conda/3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/jake/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/jake/.julia/conda/3/etc/profile.d/conda.sh" ]; then
-        . "/home/jake/.julia/conda/3/etc/profile.d/conda.sh"
+    if [ -f "/home/jake/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jake/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/jake/.julia/conda/3/bin:$PATH"
+        export PATH="/home/jake/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -154,6 +147,7 @@ export CHEATCOLORS=true
 # julia settings
 export JULIAPRO_PATH='/home/jake/opt/JuliaPro-1.5.2-1'
 export JULIA_PATH='/home/jake/opt/JuliaPro-1.5.2-1/Julia/bin'
+alias juliapro='$JULIAPRO_PATH/Launch_JuliaPro'
 # path settings
 export PATH=$PATH:$JULIA_PATH:$JULIAPRO_PATH:$HOME/bin
 # terminal prompt
@@ -164,3 +158,12 @@ source /home/jake/opt/alacritty/extra/completions/alacritty.bash
 # fuzzy completion
 source $HOME/.config/nvim/autoload/plugged/fzf/shell/completion.bash
 source $HOME/.config/nvim/autoload/plugged/fzf/shell/key-bindings.bash
+# java settings
+export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
+
+# import hand crafted functions
+source $HOME/bin/mdcd.sh
+
+# a nice little greeting
+toilet "welcome back, jake" -f wideterm -F border -F gay
+fortune
