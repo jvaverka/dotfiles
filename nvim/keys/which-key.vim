@@ -32,8 +32,7 @@ let g:which_key_map['m'] = [ ':MarkdownPreviewToggle'     , 'markdown preview' ]
 let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
 let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:which_key_map['z'] = [ ':Goyo'                      , 'zen on' ]
-let g:which_key_map['Z'] = [ ':Goyo!'                     , 'zen off' ]
+let g:which_key_map['z'] = [ ':Goyo'                      , 'zen mode' ]
 
 " c is for Conqueror of Completion
 let g:which_key_map.c = {
