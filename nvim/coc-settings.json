@@ -17,7 +17,7 @@
   "explorer.file.showHiddenFiles": true,
   "explorer.icon.enableNerdfont": true,
   "explorer.icon.enableVimDevIcons": true,
-  "explorer.previewAction.onHover": true,
+  "explorer.previewAction.onHover": "labeling",
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
@@ -33,6 +33,16 @@
     }
   },
   */
+
+  "languageserver": {
+    "julia": {
+      "command": "/home/jake/opt/JuliaPro-1.5.2-1/Julia/bin/julia",
+      "args" : ["--startup-file=no", "--history-file=no", "-e",
+      "using LanguageServer;\n       using Pkg;\n       import StaticLint;\n       import SymbolServer;\n       server = LanguageServer.LanguageServerInstance(stdin, stdout);\n       server.runlinter = true;\n       run(server);" ],
+      "filetypes": ["julia"]
+    }
+  },
+
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
   "coc.source.emoji.filetypes": ["markdown"]
 }
