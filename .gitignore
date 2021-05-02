@@ -1,1 +1,5 @@
-.config/nvim/autoload/plugged/
+# plugin install dir
+nvim/autoload
+
+# cache files
+*~
