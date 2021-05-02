@@ -73,16 +73,16 @@ call which_key#register('<Space>', "g:which_key_map")
 let g:which_key_map.t = {
       \ 'name' : '+terminal' ,
       \ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
+      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
-      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
+      \ 'h' : [':FloatermNew htop'                              , 'htop'],
+      \ 'j' : [':FloatermNew julia'                             , 'julia'],
       \ 'n' : [':FloatermNew node'                              , 'node'],
       \ 'N' : [':FloatermNew ncdu'                              , 'ncdu'],
-      \ 'j' : [':FloatermNew julia'                             , 'julia'],
       \ 'p' : [':FloatermNew python'                            , 'python'],
       \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
       \ 't' : [':FloatermToggle'                                , 'toggle'],
-      \ 'h' : [':FloatermNew htop'                              , 'htop'],
       \ }
 
 " Grade a.k.a. spell check
