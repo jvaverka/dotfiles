@@ -3,3 +3,6 @@ nvim/autoload
 
 # cache files
 *~
+
+# backup files
+*.bak
