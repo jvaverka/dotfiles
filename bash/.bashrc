@@ -142,7 +142,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # cheat settings
-export EDITOR='/usr/bin/vim'
+export EDITOR='/usr/bin/nvim'
 export CHEATCOLORS=true
 # julia settings
 export JULIAPRO_PATH='/home/jake/opt/JuliaPro-1.5.2-1'
