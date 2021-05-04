@@ -30,7 +30,7 @@ let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['m'] = [ ':MarkdownPreviewToggle'     , 'markdown preview' ]
 let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
-let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
+let g:which_key_map['s'] = [ ':Startify'                  , 'start screen' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['z'] = [ ':Goyo'                      , 'zen mode' ]
 
@@ -51,9 +51,9 @@ let g:which_key_map.c = {
       \ 's' : [':CocList -I symbols'  , 'search workspace symbols'],
       \ }
 
-" s is for search
-let g:which_key_map.s = {
-      \ 'name' : '+search' ,
+" f is for fuzzy search
+let g:which_key_map.f = {
+      \ 'name' : '+fuzzy' ,
       \ '/' : [':History/'     , 'history'],
       \ ';' : [':Commands'     , 'commands'],
       \ 'a' : [':Ag'           , 'text Ag'],
@@ -80,8 +80,17 @@ let g:which_key_map.s = {
       \ 'z' : [':FZF'          , 'FZF'],
       \ }
 
-" Register which key map
-call which_key#register('<Space>', "g:which_key_map")
+" Grade a.k.a. spell check
+let g:which_key_map.g = {
+      \ 'name' : '+grade' ,
+      \ 'a' : ['zg'          , 'add'],
+      \ 'c' : ['z='          , 'correct'],
+      \ 'f' : ['1z='         , 'first suggestion'],
+      \ 'g' : [':set spell!' , 'toggle'],
+      \ 'n' : [']s'          , 'next'],
+      \ 'p' : ['[s'          , 'previous'],
+      \ 's' : ['<C-x>s'      , 'suggest'],
+      \ }
 
 " Floaterm
 let g:which_key_map.t = {
@@ -99,14 +108,5 @@ let g:which_key_map.t = {
       \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ }
 
-" Grade a.k.a. spell check
-let g:which_key_map.g = {
-      \ 'name' : '+grade' ,
-      \ 'a' : ['zg'          , 'add'],
-      \ 'c' : ['z='          , 'correct'],
-      \ 'f' : ['1z='         , 'first suggestion'],
-      \ 'g' : [':set spell!' , 'toggle'],
-      \ 'n' : [']s'          , 'next'],
-      \ 'p' : ['[s'          , 'previous'],
-      \ 's' : ['<C-x>s'      , 'suggest'],
-      \ }
+" Register which key map
+call which_key#register('<Space>', "g:which_key_map")
