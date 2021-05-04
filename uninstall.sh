@@ -2,7 +2,8 @@
 
 # execute from dotfiles directory
 BASENAME=`basename $(pwd)`
-if [ $BASENAME != "dotfiles" ]; then
+if [ $BASENAME != "dotfiles" ]
+then
   echo "Execute script from dotfiles directory."
   exit
 fi
