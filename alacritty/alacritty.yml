@@ -1,3 +1,6 @@
+# Transparency
+background_opacity: 1.00
+
 # Colors (One Darker)
 colors:
   # Default colors
@@ -80,5 +83,4 @@ key_bindings:
   # - { key: Add, mods: Control, action: IncreaseFontSize }
   # - { key: Subtract, mods: Control, action: DecreaseFontSize }
   - { key: Minus, mods: Control, action: DecreaseFontSize }
-  - { key: N, mods: Control, action: SpawnNewInstance }
   - { key: N, mods: Control, action: SpawnNewInstance }
