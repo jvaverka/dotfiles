@@ -151,7 +151,7 @@ alias juliapro='$JULIAPRO_PATH/Launch_JuliaPro'
 # path settings
 export PATH=$PATH:$JULIA_PATH:$JULIAPRO_PATH:$HOME/bin
 # terminal prompt
-export PS1="\[$(tput bold)\]\[\033[38;5;14m\][\[$(tput sgr0)\]\u\[$(tput sgr0)\]\[\033[38;5;9m\]@\[$(tput sgr0)\]\h\[$(tput sgr0)\]\[\033[38;5;14m\]]\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;10m\]λ\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\] \[$(tput sgr0)\]"
+export PS1="\[$(tput bold)\]\[\033[38;5;14m\][\[$(tput sgr0)\]\u\[$(tput sgr0)\]\[\033[38;5;9m\]@\[$(tput sgr0)\]\h\[$(tput bold)\]\[\033[38;5;14m\]]\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;10m\]λ\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\] \[$(tput sgr0)\]"
 # cargo for alacritty
 source "$HOME/.cargo/env"
 source /home/jake/opt/alacritty/extra/completions/alacritty.bash
