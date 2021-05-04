@@ -1,6 +1,6 @@
 " set header art
 source $HOME/.config/nvim/general/ascii-art.vim
-let g:startify_custom_header = startify#pad(g:art_mountains)
+let g:startify_custom_header = startify#pad(g:art_books)
 " general settings
 let g:startify_files_number = 5
 let g:startify_session_autoload = 1
