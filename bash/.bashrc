@@ -88,12 +88,12 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -AlF'
 alias la='ls -A'
 alias lh='ls -lh'
 alias l='ls -CF'
 alias lt='ls -lrt'
-alias lat='ls -lart'
+alias lat='ls -lArt'
 alias up='cd ..'
 alias md='mkdir -p'
 alias n='nvim'
