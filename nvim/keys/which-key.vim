@@ -51,6 +51,18 @@ let g:which_key_map.c = {
       \ 's' : [':CocList -I symbols'  , 'search workspace symbols'],
       \ }
 
+" d is for dictionary a.k.a. spell check
+let g:which_key_map.d = {
+      \ 'name' : '+dict' ,
+      \ 'a' : ['zg'          , 'add'],
+      \ 'c' : ['z='          , 'correct'],
+      \ 'f' : ['1z='         , 'first suggestion'],
+      \ 'g' : [':set spell!' , 'toggle'],
+      \ 'n' : [']s'          , 'next'],
+      \ 'p' : ['[s'          , 'previous'],
+      \ 's' : ['<C-x>s'      , 'suggest'],
+      \ }
+
 " f is for fuzzy search a.k.a. FZF & others
 let g:which_key_map.f = {
       \ 'name' : '+fuzzy' ,
@@ -78,18 +90,6 @@ let g:which_key_map.f = {
       \ 'w' : [':Windows'      , 'search windows'],
       \ 'y' : [':Filetypes'    , 'file types'],
       \ 'z' : [':FZF'          , 'FZF'],
-      \ }
-
-" d is for dictionary a.k.a. spell check
-let g:which_key_map.d = {
-      \ 'name' : '+dict' ,
-      \ 'a' : ['zg'          , 'add'],
-      \ 'c' : ['z='          , 'correct'],
-      \ 'f' : ['1z='         , 'first suggestion'],
-      \ 'g' : [':set spell!' , 'toggle'],
-      \ 'n' : [']s'          , 'next'],
-      \ 'p' : ['[s'          , 'previous'],
-      \ 's' : ['<C-x>s'      , 'suggest'],
       \ }
 
 " t is for terminal a.k.a. Floaterm
