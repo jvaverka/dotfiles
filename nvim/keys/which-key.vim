@@ -34,9 +34,9 @@ let g:which_key_map['s'] = [ ':Startify'                  , 'start screen' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['z'] = [ ':Goyo'                      , 'zen mode' ]
 
-" c is for Conqueror of Completion
+" c is for code a.k.a. Conqueror of Completion
 let g:which_key_map.c = {
-      \ 'name' : '+coc',
+      \ 'name' : '+code',
       \ 'a' : [':CocAction'           , 'code actions'],
       \ 'c' : [':CocList commands'    , 'commands'],
       \ 'd' : [':CocList diagnostics' , 'diagnostics'],
@@ -51,7 +51,7 @@ let g:which_key_map.c = {
       \ 's' : [':CocList -I symbols'  , 'search workspace symbols'],
       \ }
 
-" f is for fuzzy search
+" f is for fuzzy search a.k.a. FZF & others
 let g:which_key_map.f = {
       \ 'name' : '+fuzzy' ,
       \ '/' : [':History/'     , 'history'],
@@ -80,9 +80,9 @@ let g:which_key_map.f = {
       \ 'z' : [':FZF'          , 'FZF'],
       \ }
 
-" Grade a.k.a. spell check
-let g:which_key_map.g = {
-      \ 'name' : '+grade' ,
+" d is for dictionary a.k.a. spell check
+let g:which_key_map.d = {
+      \ 'name' : '+dict' ,
       \ 'a' : ['zg'          , 'add'],
       \ 'c' : ['z='          , 'correct'],
       \ 'f' : ['1z='         , 'first suggestion'],
@@ -92,9 +92,9 @@ let g:which_key_map.g = {
       \ 's' : ['<C-x>s'      , 'suggest'],
       \ }
 
-" Floaterm
+" t is for terminal a.k.a. Floaterm
 let g:which_key_map.t = {
-      \ 'name' : '+terminal' ,
+      \ 'name' : '+term' ,
       \ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
