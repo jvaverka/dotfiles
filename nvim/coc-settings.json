@@ -17,7 +17,7 @@
   "explorer.file.showHiddenFiles": true,
   "explorer.icon.enableNerdfont": true,
   "explorer.icon.enableVimDevIcons": true,
-  "explorer.previewAction.onHover": "labeling",
+  "explorer.previewAction.onHover": false,
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
