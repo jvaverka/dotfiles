@@ -37,6 +37,7 @@ let g:which_key_map['z'] = [ ':Goyo'                      , 'zen mode' ]
 " c is for code a.k.a. Conqueror of Completion
 let g:which_key_map.c = {
       \ 'name' : '+code',
+      \ '!' : [':CocRestart'          , 'restart'],
       \ 'a' : [':CocAction'           , 'code actions'],
       \ 'c' : [':CocList commands'    , 'commands'],
       \ 'd' : [':CocList diagnostics' , 'diagnostics'],
@@ -53,19 +54,19 @@ let g:which_key_map.c = {
 
 " d is for dictionary a.k.a. spell check
 let g:which_key_map.d = {
-      \ 'name' : '+dict' ,
-      \ 'a' : ['zg'          , 'add'],
-      \ 'c' : ['z='          , 'correct'],
+      \ 'name' : '+dict',
+      \ 'a' : ['zg'          , 'add to dict'],
+      \ 'c' : ['z='          , 'correction list'],
       \ 'f' : ['1z='         , 'first suggestion'],
-      \ 'g' : [':set spell!' , 'toggle'],
       \ 'n' : [']s'          , 'next'],
-      \ 'p' : ['[s'          , 'previous'],
+      \ 'p' : ['[s'          , 'prev'],
       \ 's' : ['<C-x>s'      , 'suggest'],
+      \ 't' : [':set spell!' , 'toggle'],
       \ }
 
 " f is for fuzzy search a.k.a. FZF & others
 let g:which_key_map.f = {
-      \ 'name' : '+fuzzy' ,
+      \ 'name' : '+fuzzy',
       \ '/' : [':History/'     , 'history'],
       \ ';' : [':Commands'     , 'commands'],
       \ 'a' : [':Ag'           , 'text Ag'],
@@ -92,9 +93,25 @@ let g:which_key_map.f = {
       \ 'z' : [':FZF'          , 'FZF'],
       \ }
 
+" g is for git a.k.a. vim-fugitive
+let g:which_key_map.g = {
+      \ 'name' : '+git',
+      \ 'a' : [':Gwrite'     , 'add'],
+      \ 'b' : [':Git blame'  , 'blame'],
+      \ 'c' : [':Gcommit'    , 'commit'],
+      \ 'C' : [':Gread'      , 'checkout'],
+      \ 'f' : [':Gfetch'     , 'fetch'],
+      \ 'g' : [':diffget //2', 'left'],
+      \ 'h' : [':diffget //3', 'right'],
+      \ 'p' : [':Gpull'      , 'pull'],
+      \ 'P' : [':Gpush'      , 'push'],
+      \ 'r' : [':Gremove'    , 'remove'],
+      \ 's' : [':G'          , 'status'],
+      \}
+
 " t is for terminal a.k.a. Floaterm
 let g:which_key_map.t = {
-      \ 'name' : '+term' ,
+      \ 'name' : '+term',
       \ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
