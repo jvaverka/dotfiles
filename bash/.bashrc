@@ -87,31 +87,7 @@ fi
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -AlF'
-alias la='ls -A'
-alias lh='ls -lh'
-alias l='ls -CF'
-alias lt='ls -lrt'
-alias lat='ls -lArt'
-alias lr='ls -lR'
-alias up='cd ..'
-alias md='mkdir -p'
-alias n='nvim'
-alias nv='nvim'
-alias nvi='nvim'
-alias v='vim'
-alias vi='vim'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -148,7 +124,6 @@ export CHEATCOLORS=true
 # julia settings
 export JULIAPRO_PATH='/home/jake/opt/JuliaPro-1.5.2-1'
 export JULIA_PATH='/home/jake/opt/JuliaPro-1.5.2-1/Julia/bin'
-alias juliapro='$JULIAPRO_PATH/Launch_JuliaPro'
 # path settings
 export PATH=$PATH:$JULIA_PATH:$JULIAPRO_PATH:$HOME/bin
 # terminal prompt
