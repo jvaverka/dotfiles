@@ -21,7 +21,6 @@ stow -D julia -t $JULIA_DIR
 echo "Julia configuration uninstalled!"
 
 # bash
-BACKUP_BASHRC=$HOME/.bashrc
 echo "Uninstalling Bash config ..."
 stow -D bash -t $HOME
 echo "Bash configuration uninstalled!"
@@ -31,6 +30,11 @@ ALACRITTY_DIR=$HOME/.config/alacritty
 echo "Uninstalling Alacritty config ..."
 stow -D alacritty -t $ALACRITTY_DIR
 echo "Alacritty configuration uninstalled!"
+
+# git
+echo "Uninstalling Git config ..."
+stow -D git -t $HOME
+echo "Git configuration uninstalled!"
 
 # notify
 echo "Done"

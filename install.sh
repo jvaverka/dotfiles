@@ -95,5 +95,25 @@ else
   echo "Alacritty configuration complete!"
 fi
 
+# git
+GIT_CONFIG=$HOME/.gitconfig
+CONFIG_GIT="yes"
+hash git 2>/dev/null || unset CONFIG_GIT
+if [ -z "${CONFIG_GIT+set}" ]
+then
+  echo "Git not found."
+  echo "Skipping Git config."
+else
+  echo "Preparing to install Git config ..."
+  if [ -e "$GIT_CONFIG" -a ! -L "$GIT_CONFIG" ]
+  then
+    echo "Backing up old config to ./git/gitconfig.bak"
+    mv $GIT_CONFIG git/gitconfig.bak
+  fi
+  echo "Installing Git config to $HOME"
+  stow git -t $HOME
+  echo "Git configuration complete!"
+fi
+
 # notify
 echo "Done."
