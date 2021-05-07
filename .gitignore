@@ -6,6 +6,3 @@ nvim/autoload
 
 # backup files
 *.bak
-
-# gitconfig
-git/.gitconfig
