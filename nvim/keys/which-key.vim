@@ -126,7 +126,6 @@ let g:which_key_map.s = {
 " t is for terminal a.k.a. Floaterm
 let g:which_key_map.t = {
       \ 'name' : '+term',
-      \ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
@@ -137,6 +136,7 @@ let g:which_key_map.t = {
       \ 'p' : [':FloatermNew python'                            , 'python'],
       \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
       \ 't' : [':FloatermToggle'                                , 'toggle'],
+      \ ';' : [':term'                  , 'terminal'],
       \ }
 
 " Register which key map
