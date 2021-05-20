@@ -8,7 +8,8 @@ vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 let g:which_key_map =  {}
 " Define a separator
 let g:which_key_sep = '→'
-" set timeoutlen=100
+" Milliseconds wait for key sequence
+set timeoutlen=250
 
 " Not a fan of floating windows for this
 let g:which_key_use_floating_win = 0
