@@ -54,4 +54,7 @@
     }
   },
 
+  // turn bash language server on
+  "sh.enable": true,
+
 }
