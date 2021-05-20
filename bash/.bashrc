@@ -132,9 +132,6 @@ source $HOME/.config/nvim/autoload/plugged/fzf/shell/key-bindings.bash
 # java settings
 export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
 
-# import hand crafted functions
-source $HOME/bin/mdcd.sh
-
 # a nice little greeting
 toilet "welcome back, jake" -f wideterm -F border -F gay
 fortune
