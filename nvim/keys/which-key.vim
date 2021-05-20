@@ -34,6 +34,8 @@ let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['z'] = [ ':Goyo'                      , 'zen mode' ]
 let g:which_key_map['S'] = [ ':Startify'                , 'start screen'    ]
+let g:which_key_map['T'] = [ '<C-W>T'                   , 'open in tab'     ]
+let g:which_key_map['w'] = [ '<C-W>r'                   , 'rotate windows'  ]
 
 " c is for code a.k.a. Conqueror of Completion
 let g:which_key_map.c = {
