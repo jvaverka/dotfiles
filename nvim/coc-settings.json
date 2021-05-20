@@ -1,4 +1,5 @@
 {
+  // auto format these filetypes on save
   "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "python"],
 
   // python config
@@ -11,6 +12,10 @@
     "UltiSnips",
     "~/.config/nvim/utils/snips"
   ],
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+
+  // emoji support for md
+  "coc.source.emoji.filetypes": ["markdown"],
 
   // explorer
   "explorer.width": 30,
@@ -23,11 +28,22 @@
     "v": "open:vsplit"
   },
 
+  // lsp
   "languageserver": {
     "julia": {
-      "command": "/home/jake/opt/JuliaPro-1.5.2-1/Julia/bin/julia",
-      "args" : ["--startup-file=no", "--history-file=no", "-e",
-      "using LanguageServer;\n       using Pkg;\n       import StaticLint;\n       import SymbolServer;\n       server = LanguageServer.LanguageServerInstance(stdin, stdout);\n       server.runlinter = true;\n       run(server);" ],
+      "command": "julia",
+      "args" : [
+        "--startup-file=no",
+        "--history-file=no",
+        "-e",
+        "using LanguageServer;",
+        "using Pkg;",
+        "import StaticLint;",
+        "import SymbolServer;",
+        "server = LanguageServer.LanguageServerInstance(stdin, stdout);",
+        "server.runlinter = true;",
+        "run(server);"
+      ],
       "filetypes": ["julia"]
     },
     "bash": {
@@ -38,6 +54,4 @@
     }
   },
 
-  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
-  "coc.source.emoji.filetypes": ["markdown"]
 }
