@@ -21,7 +21,7 @@ let g:startify_bookmarks = [
             \ { 'b': '~/.bashrc' },
             \ { 'n': '~/.config/nvim/init.vim' },
             \ { 'o': '~/Documents/org/myfile.dotoo' },
-            \ { 'w': '~/dev/data/src/mysite' },
+            \ { 'w': '~/Repos/blog/index.md' },
             \ { 's': '~/.config/nvim/plug-config/start-screen.vim' },
             \ ]
 " session settings
