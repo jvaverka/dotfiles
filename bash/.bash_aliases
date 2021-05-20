@@ -23,7 +23,6 @@ alias ...='cd ../..'
 alias md='mkdir -p'
 alias up='cd ..'
 # editors
-alias juliapro='$JULIAPRO_PATH/Launch_JuliaPro'
 alias n='nvim'
 alias nv='nvim'
 alias nvi='nvim'

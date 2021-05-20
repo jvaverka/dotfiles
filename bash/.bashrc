@@ -121,11 +121,6 @@ unset __conda_setup
 # cheat settings
 export EDITOR='/usr/bin/nvim'
 export CHEATCOLORS=true
-# julia settings
-export JULIAPRO_PATH='/home/jake/opt/JuliaPro-1.5.2-1'
-export JULIA_PATH='/home/jake/opt/JuliaPro-1.5.2-1/Julia/bin'
-# path settings
-export PATH=$PATH:$JULIA_PATH:$JULIAPRO_PATH:$HOME/bin
 # terminal prompt
 export PS1="\[$(tput bold)\]\[\033[38;5;14m\][\[$(tput sgr0)\]\[\033[38;5;15m\]\u\[$(tput sgr0)\]\[\033[38;5;9m\]@\[$(tput sgr0)\]\[\033[38;5;15m\]\h\[$(tput bold)\]\[\033[38;5;14m\]]\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;10m\]λ\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\] \[$(tput sgr0)\]"
 # cargo for alacritty
