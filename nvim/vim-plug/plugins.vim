@@ -60,6 +60,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-markdown'
     " Markdown Preview for enjoyable viewing
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    " Vim DevIcons - filetype symbols for startify menu
+    Plug 'ryanoasis/vim-devicons'
 
     " THEMES ======================================
     " OneDark theme

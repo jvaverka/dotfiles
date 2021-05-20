@@ -26,3 +26,7 @@ let g:startify_bookmarks = [
             \ ]
 " session settings
 let g:startify_session_dir = '~/.config/nvim/session'
+" prepend filetype symbol to each startify entry
+function! StartifyEntryFormat()
+    return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+endfunction
