@@ -31,9 +31,9 @@ let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['m'] = [ ':MarkdownPreviewToggle'     , 'markdown preview' ]
 let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
-let g:which_key_map['s'] = [ ':Startify'                  , 'start screen' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['z'] = [ ':Goyo'                      , 'zen mode' ]
+let g:which_key_map['S'] = [ ':Startify'                , 'start screen'    ]
 
 " c is for code a.k.a. Conqueror of Completion
 let g:which_key_map.c = {
@@ -108,6 +108,15 @@ let g:which_key_map.g = {
       \ 'P' : [':Gpush'      , 'push'],
       \ 'r' : [':Gremove'    , 'remove'],
       \ 's' : [':G'          , 'status'],
+" s is for session a.k.a. startify-:S*
+let g:which_key_map.s = {
+      \ 'name': '+session',
+      \ 'c' : [':SClose'  , 'close'       ],
+      \ 'd' : [':SDelete' , 'delete'      ],
+      \ 'D' : [':SDelete!', 'force delete'],
+      \ 'l' : [':SLoad'   , 'load'        ],
+      \ 's' : [':SSave'   , 'save'        ],
+      \ 'S' : [':SSave!'  , 'force save'  ],
       \}
 
 " t is for terminal a.k.a. Floaterm
