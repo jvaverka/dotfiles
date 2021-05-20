@@ -110,6 +110,8 @@ let g:which_key_map.g = {
       \ 'P' : [':Gpush'      , 'push'],
       \ 'r' : [':Gremove'    , 'remove'],
       \ 's' : [':G'          , 'status'],
+      \ 'v' : [':GV'         , 'view commit log'],
+      \ 'V' : [':GV!'        , 'view file log'  ],
 " s is for session a.k.a. startify-:S*
 let g:which_key_map.s = {
       \ 'name': '+session',
