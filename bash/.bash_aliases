@@ -33,3 +33,5 @@ alias path='echo -e ${PATH//:/\\n}'
 alias rn='date +"%T"'
 alias todate='date +"%d-%m-%Y"'
 alias today='date +"%A"'
+# run blog locally
+alias franklin="julia -O0 -e 'using Franklin; serve()'"
