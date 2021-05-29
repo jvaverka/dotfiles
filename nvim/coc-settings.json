@@ -19,7 +19,7 @@
 
   // explorer
   "explorer.width": 30,
-  "explorer.file.showHiddenFiles": true,
+  "explorer.file.showHiddenFiles": false,
   "explorer.icon.enableNerdfont": true,
   "explorer.icon.enableVimDevIcons": true,
   "explorer.previewAction.onHover": false,
