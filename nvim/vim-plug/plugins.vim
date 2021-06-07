@@ -64,6 +64,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-surround'
     " Vim DevIcons - filetype symbols for startify menu
     Plug 'ryanoasis/vim-devicons'
+    " Vim SendToWindow - simple REPL functionality
+    Plug 'karoliskoncevicius/vim-sendtowindow'
 
     " THEMES ======================================
     " OneDark theme
