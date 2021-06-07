@@ -66,6 +66,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ryanoasis/vim-devicons'
     " Vim SendToWindow - simple REPL functionality
     Plug 'karoliskoncevicius/vim-sendtowindow'
+    " Vim Pomodoro - tomato timer
+    Plug 'adelarsq/vim-pomodoro' " soywood/keepeye.vim
 
     " THEMES ======================================
     " OneDark theme
