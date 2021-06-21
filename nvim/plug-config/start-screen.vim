@@ -19,6 +19,7 @@ let g:startify_lists = [
 " bookmark settings
 let g:startify_bookmarks = [
             \ { 'b': '~/.bashrc' },
+            \ { 'c': '~/.config/nvim/coc-settings.json' },
             \ { 'n': '~/.config/nvim/init.vim' },
             \ { 'o': '~/Documents/org/myfile.dotoo' },
             \ { 'w': '~/Repos/blog/index.md' },
