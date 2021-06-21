@@ -35,3 +35,5 @@ alias todate='date +"%d-%m-%Y"'
 alias today='date +"%A"'
 # run blog locally
 alias franklin="julia -O0 -e 'using Franklin; serve()'"
+# start pluto locally
+alias pluto="julia -O0 -e 'using Pluto; Pluto.run()'"
