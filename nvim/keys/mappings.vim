@@ -46,3 +46,5 @@ nnoremap <C-l> <C-w>l
 " nnoremap <Leader>o o<Esc>^Da
 " nnoremap <Leader>O O<Esc>^Da
 
+" compile my RMarkdown documents
+autocmd FileType rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>

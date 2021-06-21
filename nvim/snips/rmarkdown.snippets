@@ -1,0 +1,22 @@
+snippet rmarkdownfm "rmarkdown front matter" Ab
+---
+title: "${1:Mathematics of Finance}"
+subtitle: "${2:Sub Title}"
+author: "Jacob Vaverka"
+date: "`!v strftime("%B %d, %Y")`"
+output:
+  pdf_document:
+      df_print: kable
+      highlight: tango
+urlcolor: blue
+documentclass: article
+fontsize: 12pt
+geometry: margin=1in
+---
+
+\titlepage
+\tableofcontents
+\newpage
+
+# ${3:Problem 1}
+endsnippet

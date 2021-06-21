@@ -68,6 +68,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'karoliskoncevicius/vim-sendtowindow'
     " Vim Pomodoro - tomato timer
     Plug 'adelarsq/vim-pomodoro' " soywood/keepeye.vim
+    " Vim RMarkdown - everything I need to make quality publications
+    Plug 'vim-pandoc/vim-pandoc'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
+    Plug 'vim-pandoc/vim-rmarkdown'
 
     " THEMES ======================================
     " OneDark theme

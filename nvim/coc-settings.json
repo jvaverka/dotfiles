@@ -51,7 +51,12 @@
       "args": ["start"],
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
-    }
+    },
+    /* "R" :{ */
+    /*   "command": "/usr/bin/R", */
+    /*   "args": ["--slave", "-e", "languageserver::run()"], */
+    /*   "filetypes": ["R", "Rmd", "r", "rmd"] */
+    /* } */
   },
 
   // turn bash language server on
