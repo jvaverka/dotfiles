@@ -126,9 +126,6 @@ export PS1="\[$(tput bold)\]\[\033[38;5;14m\][\[$(tput sgr0)\]\[\033[38;5;15m\]\
 # cargo for alacritty
 source "$HOME/.cargo/env"
 source /home/jake/opt/alacritty/extra/completions/alacritty.bash
-# fuzzy completion
-source $HOME/.config/nvim/autoload/plugged/fzf/shell/completion.bash
-source $HOME/.config/nvim/autoload/plugged/fzf/shell/key-bindings.bash
 # java settings
 export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
 
@@ -139,3 +136,5 @@ fortune
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
