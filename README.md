@@ -1,8 +1,17 @@
-# dotfiles
+# Purpose
 
-Some configurations that my be useful in future.
+Configurations for:
+
+- Neovim
+- Julia
+- Bash
+- Git
+- Alacritty
+
+# Privacy
 
 It may be useful to stop tracking files in working tree for privacy reasons.
+
 Use the following command to stop tracking changes:
 
 ```shell
