@@ -16,6 +16,7 @@ set splitright                          " Vertical splits will automatically be 
 set t_Co=256                            " Support 256 colors
 set conceallevel=0                      " So that I can see `` in markdown files
 set tabstop=2                           " Insert 2 spaces for a tab
+set softtabstop=2                       " More nice tab actions
 set shiftwidth=2                        " Change the number of space characters inserted for indentation
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set expandtab                           " Converts tabs to spaces
@@ -39,7 +40,7 @@ set nohlsearch                          " Don't do the ugly highlighting for sea
 set spelllang=en                        " Add the spell check language
 set ignorecase                          " Case in-sensitive searching
 set smartcase                           " ^ unless the search pattern contains uppercase letter
-
+set scrolloff=10                        " Keep some lines above/below cursor
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " You can't stop me
