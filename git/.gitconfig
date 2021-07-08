@@ -7,6 +7,7 @@
   ; don't use 'a' since I don't have 'peco' installed
 	; a = "!git status --short | peco | awk '{print $2}' | xargs git add"
   ;
+  a = add
   ; add conflicted file on merge
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
   ba = branch -a
@@ -19,8 +20,9 @@
   d = diff
   df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
   dump = cat-file -p
-  # edit conflicted file on merge
+  ; edit conflicted file on merge
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+  f = fetch
   find = "!f() { git log --pretty=format:\"%h %cd [%cn] %s%d\" --date=relative -S'pretty' -S\"$@\" | peco | awk '{print $1}' | xargs -I {} git diff {}^ {}; }; f"
   hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
