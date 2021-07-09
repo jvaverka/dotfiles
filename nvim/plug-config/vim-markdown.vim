@@ -17,5 +17,9 @@ let g:vim_markdown_json_frontmatter = 1
 let g:vim_markdown_auto_insert_bullets = 1
 au filetype markdown set formatoptions+=ro
 au filetype markdown set comments=b:*,b:-,b:+,b:1.,n:>
+au filetype markdown set colorcolumn=80
+au filetype markdown normal zR
 au filetype dotoo set formatoptions+=ro
 au filetype dotoo set comments=b:*,b:-,b:+,b:1.,n:>
+au filetype dotoo set colorcolumn=80
+au filetype dotoo normal zR
