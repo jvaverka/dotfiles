@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# calculator - quiet, interactive, with math library loaded
+bc -qil

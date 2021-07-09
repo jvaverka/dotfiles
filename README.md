@@ -68,3 +68,10 @@ can be used to switch themes for the terminal.
 
 Using the setup in this repo, changing Neovim themes is easy.
 Just change the appropriate file in `init.vim`.
+
+## TODO
+
+- convenience functions in `bin/`
+  - dirsize
+  - myip
+  - mdcd
