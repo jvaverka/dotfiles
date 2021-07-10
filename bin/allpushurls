@@ -1,0 +1,18 @@
+#!/bin/bash
+
+REPO_NAME=`basename $(pwd)`
+GITHUB_USERNAME=jvaverka
+GITLAB_USERNAME=Vaverka
+
+# add a new remote called 'all'
+git remote add all git@gitlab.com:$GITLAB_USERNAME/$REPO_NAME.git
+# add a 'pushurl' to the 'all' remote for each repo we wish to sync
+git remote set-url --add --push all git@github.com:$GITHUB_USERNAME/$REPO_NAME.git
+git remote set-url --add --push all git@gitlab.com:$GITLAB_USERNAME/$REPO_NAME.git
+
+# confirm results
+git remote -v
+git config -l | grep '^remote\.all'
+
+echo -e "Now you can push to both GitLab & GitHub with one command"
+echo -e "\tgit push origin master"
