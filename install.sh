@@ -115,5 +115,10 @@ else
   echo "Git configuration complete!"
 fi
 
+LOCAL_BIN=$HOME/.local/bin
+echo "Installing Bin functions to $LOCAL_BIN"
+stow bin -t $LOCAL_BIN
+echo "Bin function installation complete!"
+
 # notify
 echo "Done."

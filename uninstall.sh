@@ -36,5 +36,13 @@ echo "Uninstalling Git config ..."
 stow -D git -t $HOME
 echo "Git configuration uninstalled!"
 
+# bin
+LOCAL_BIN=$HOME/.local/bin
+echo "Uninstalling Bin functions"
+for func in $(ls bin);
+do
+  rm $LOCAL_BIN/$func
+done
+
 # notify
 echo "Done"
