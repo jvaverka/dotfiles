@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+# weave julia literate files
+if [ -z "$1" ]
+then
+  echo -e "No Julia Literate doc passed - exiting."
+  exit
+fi
+IN=$1
+
+if [ -z "$2" ]
+then
+  echo -e "No output path specified - setting to 'generated'."
+  OUT=generated
+else
+  OUT=$2
+fi
+
+julia -O0 -e "
+  using Literate;
+  println(pwd());
+  Literate.markdown(\"$IN\", \"$OUT\", execute = true)
+"

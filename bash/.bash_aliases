@@ -47,5 +47,3 @@ alias today='date +"%A"'
 alias franklin="julia -O0 -e 'using Franklin; serve()'"
 # start pluto locally
 alias pluto="julia -O0 -e 'using Pluto; Pluto.run()'"
-# weave literate docs
-alias literate="julia -O0 -e 'using Literate; println(pwd()); Literate.markdown(\"solution.jl\", \"generated\", execute = true)'"
