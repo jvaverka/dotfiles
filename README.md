@@ -75,3 +75,4 @@ Just change the appropriate file in `init.vim`.
   - dirsize
   - myip
   - mdcd
+  - ranger config?
