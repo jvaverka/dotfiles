@@ -17,6 +17,7 @@ source $HOME/.config/nvim/plug-config/dotoo.vim
 source $HOME/.config/nvim/plug-config/vim-pomodoro.vim
 source $HOME/.config/nvim/plug-config/vim-rmarkdown.vim
 " Get general settings
+" source $HOME/.config/nvim/general/neovide.vim
 source $HOME/.config/nvim/general/paths.vim
 source $HOME/.config/nvim/general/settings.vim
 " Get key bindings

@@ -41,6 +41,8 @@ set spelllang=en                        " Add the spell check language
 set ignorecase                          " Case in-sensitive searching
 set smartcase                           " ^ unless the search pattern contains uppercase letter
 set scrolloff=10                        " Keep some lines above/below cursor
+set guifont=FiraCode\ Nerd\ Font:h18    " For Neovide
+
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " You can't stop me
