@@ -1,14 +1,23 @@
 #!/bin/bash
 
+# get file name and extension
+filename=$1
+file_ext=$(echo $filename |awk -F . '{if (NF>1) {print $NF}}')
 
-# weave julia markdown files
-if [ -z "$1" ]
+# check valid file is passed
+if [ -z "$filename" ]
 then
   echo -e "No Julia Markdown doc passed - exiting."
   exit
+elif [ "$file_ext" != "jmd" ]
+then
+  echo -e "Weave.jl cannot process \"$file_ext\" docs."
+  echo -e "Pass a Julia Markdown doc (*.jmd)."
+  exit
 fi
 
+# weave julia markdown files
 julia -O0 -e "
   using Weave;
-  weave(normpath(@__DIR__, \"$1\"); doctype = \"md2html\")
+  weave(normpath(@__DIR__, \"$filename\"); doctype = \"md2html\")
 "
