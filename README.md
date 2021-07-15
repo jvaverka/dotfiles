@@ -7,8 +7,41 @@ Configurations for:
 - Neovim
 - Julia
 - Bash
+- Bin
 - Git
 - Alacritty
+
+## Install
+
+To install all these configurations:
+
+```shell
+cd ~
+git clone <this-repo>
+cd <this-repo>
+stow */
+```
+
+To install a selected configuration, e.g., Neovim:
+
+```shell
+cd ~
+git clone <this-repo>
+cd <this-repo>
+stow nvim
+```
+
+To uninstall a selected configuration, e.g., Neovim:
+
+```shell
+stow -D nvim
+```
+
+To uninstall all configurations:
+
+```shell
+stow -D */
+```
 
 ## Privacy
 
