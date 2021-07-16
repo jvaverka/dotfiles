@@ -4,7 +4,7 @@
 
 Configurations for:
 
-- Neovim
+- LunarVim
 - Julia
 - Bash
 - Bin
@@ -42,6 +42,27 @@ To uninstall all configurations:
 ```shell
 stow -D */
 ```
+
+## LunarVim?
+
+Blew away my Neovim config and switched to
+[LunarVim](https://github.com/ChristianChiarulli/LunarVim)
+for several reasons:
+
+1. LunarVim is faster
+1. LunarVim has a community of developers
+    1. Which now includes me
+1. LunarVim reduces external dependencies by leveraging Neovim 0.5+ features
+    1. Like Treesitter
+    1. Like native LSP
+    1. I'm sure there's more but those two alone make it worth while
+1. LunarVim is entirely configured in lua
+    1. Matter of preference, but this works better for me
+1. LunarVim's predecessor (NVCode) was the inspiration for my config
+    1. LunarVim just does it better
+
+What does all this mean?
+Means that all I need to track now is my `lv-config.lua`.
 
 ## Privacy
 
