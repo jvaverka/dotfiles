@@ -81,7 +81,7 @@ O.user_autocommands = {
   -- Markdown
   { "filetype", "markdown", "set formatoptions+=ro" },
   { "filetype", "markdown", "set comments=b:*,b:-,b:+,b:1.,n:>" },
-  { "filetype", "markdown", "set colorcolumn=80" },
+  { "filetype", "markdown", "set colorcolumn=81" },
   { "filetype", "markdown", "set nofoldenable" },
   -- Julia Markdown
   { "BufRead,BufNewFile", "*.jmd", "set filetype=markdown" },
