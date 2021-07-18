@@ -1,12 +1,3 @@
---[[
-O is the global options object
-
-Linters should be
-filled in as strings with either
-a global executable or a path to
-an executable
-]]
-
 -- general
 O.format_on_save = true
 O.completion.autocomplete = true
@@ -23,7 +14,7 @@ O.plugin.zen.active = true
 O.plugin.zen.window.height = 0.90
 
 O.treesitter.ensure_installed = "maintained"
-O.treesitter.ignore_install = { }
+O.treesitter.ignore_install = {}
 O.treesitter.highlight.enabled = true
 
 -- python
@@ -31,9 +22,9 @@ O.lang.python.isort = true
 O.lang.python.diagnostics.virtual_text = true
 O.lang.python.analysis.use_library_code_types = true
 O.lang.python.formatter.exe = "black"
-O.lang.python.formatter.args = {"-"}
-vim.cmd[[ let g:python3_host_prog = '/home/jake/opt/anaconda3/envs/neovim/bin/python3.9' ]]
-vim.cmd[[ let g:python_host_prog = '/home/jake/opt/anaconda3/envs/mypy2/bin/python2.7' ]]
+O.lang.python.formatter.args = { "-" }
+vim.cmd [[ let g:python3_host_prog = '/home/jake/opt/anaconda3/envs/neovim/bin/python3.9' ]]
+vim.cmd [[ let g:python_host_prog = '/home/jake/opt/anaconda3/envs/mypy2/bin/python2.7' ]]
 
 -- go
 -- to change default formatter from gofmt to goimports
@@ -50,7 +41,7 @@ O.lang.tsserver.linter = "prettier"
 
 -- latex
 O.lang.latex.auto_save = false
-O.lang.latex.ignore_errors = { }
+O.lang.latex.ignore_errors = {}
 
 -- mine
 O.default_options.relativenumber = true
