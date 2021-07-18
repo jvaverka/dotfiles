@@ -59,17 +59,15 @@ O.user_plugins = {
   -- markdown
   {
     "iamcco/markdown-preview.nvim",
-      run = 'cd app && yarn install',
-      cmd = 'MarkdownPreview',
-      ft = "markdown"
+    run = "cd app && yarn install",
+    cmd = "MarkdownPreview",
+    ft = "markdown",
   },
+  -- Julia Editor Support
+  { "JuliaEditorSupport/julia-vim" },
   -- Rmarkdown
-  -- {
-  --   "vim-pandoc/vim-pandoc",
-  -- },
-  -- {
-  --   "vim-pandoc/vim-pandoc-syntax",
-  -- },
+  -- { "vim-pandoc/vim-pandoc", },
+  -- { "vim-pandoc/vim-pandoc-syntax", },
   -- {
   --   "vim-pandoc/vim-rmarkdown",
   --     run = 'cd app && yarn install',
@@ -80,9 +78,16 @@ O.user_plugins = {
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 O.user_autocommands = {
-  { "BufWinEnter,BufNewFile", "*.jmd", "set filetype=markdown"},
-  { "BufRead,BufNewFile", "*.rmd", "set filetype=rmarkdown"},
-  { "filetype", "rmarkdown", "set nofoldenable"},
+  -- Markdown
+  { "filetype", "markdown", "set formatoptions+=ro" },
+  { "filetype", "markdown", "set comments=b:*,b:-,b:+,b:1.,n:>" },
+  { "filetype", "markdown", "set colorcolumn=80" },
+  { "filetype", "markdown", "set nofoldenable" },
+  -- Julia Markdown
+  { "BufRead,BufNewFile", "*.jmd", "set filetype=markdown" },
+  -- R Markdown
+  { "BufRead,BufNewFile", "*.rmd", "set filetype=rmarkdown" },
+  { "filetype", "rmarkdown", "set nofoldenable" },
 }
 
 -- Additional Leader bindings for WhichKey
