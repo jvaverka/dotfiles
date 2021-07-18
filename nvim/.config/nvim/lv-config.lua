@@ -49,11 +49,13 @@ O.default_options.relativenumber = true
 -- Additional Plugins
 O.user_plugins = {
   -- cool function signature info
-  {
-    "ray-x/lsp_signature.nvim",
-      config = function() require"lsp_signature".on_attach() end,
-      event = "InsertEnter"
-  },
+  -- {
+  --   "ray-x/lsp_signature.nvim",
+  --   config = function()
+  --     require("lsp_signature").on_attach()
+  --   end,
+  --   event = "InsertEnter",
+  -- },
   -- markdown
   {
     "iamcco/markdown-preview.nvim",
