@@ -1,18 +1,31 @@
 #!/bin/bash
 
+magenta="\033[35;1m"
+cyan="\033[36;1m"
+green="\033[32;1m"
+yellow="\033[33;1m"
+red="\033[31m"
+bold="\e[1m"
+nc="\033[m"
+
 REPO_NAME=`basename $(pwd)`
 GITHUB_USERNAME=jvaverka
 GITLAB_USERNAME=Vaverka
 
-# add a new remote called 'all'
+echo -e "Adding a ${bold}remote${nc} called ${cyan}all${nc}"
 git remote add all git@gitlab.com:$GITLAB_USERNAME/$REPO_NAME.git
-# add a 'pushurl' to the 'all' remote for each repo we wish to sync
+
+echo -e "Adding a ${bold}push${nc} url to ${cyan}all${nc} for ${green}GITHUB${nc}"
 git remote set-url --add --push all git@github.com:$GITHUB_USERNAME/$REPO_NAME.git
+echo -e "Adding a ${bold}push${nc} url to ${cyan}all${nc} for ${magenta}GITLAB${nc}"
 git remote set-url --add --push all git@gitlab.com:$GITLAB_USERNAME/$REPO_NAME.git
 
-# confirm results
+echo -e "Confirmation:"
+echo -e "\t${bold}git remote -v${nc}"
 git remote -v
+echo -e "\t${bold}git config -l | grep '^remote\.all'${nc}"
 git config -l | grep '^remote\.all'
 
-echo -e "Now you can push to both GitLab & GitHub with one command"
-echo -e "\tgit push origin master"
+echo -e "Done!"
+echo -e "Now you can push to ${green}GitHub${nc} & ${magenta}GitLab${nc} with one command:"
+echo -e "\t${bold}git push${nc} ${cyan}all${nc} ${bold}master${nc}"
