@@ -88,6 +88,8 @@ O.user_autocommands = {
   -- R Markdown
   { "BufRead,BufNewFile", "*.rmd", "set filetype=rmarkdown" },
   { "filetype", "rmarkdown", "set nofoldenable" },
+  -- Calcurse
+  { "BufRead,BufNewFile", "~/.calcurse/notes/*", "set filetype=markdown" },
 }
 
 -- Additional Leader bindings for WhichKey
