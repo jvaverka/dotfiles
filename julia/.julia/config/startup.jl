@@ -1,4 +1,3 @@
-println("Starting up Jake's Julia env")
-println("λ ~/.julia/config/startup.jl")
+println("Starting up Jake's Julia env ❤")
 
 using OhMyREPL
