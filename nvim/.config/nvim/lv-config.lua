@@ -91,16 +91,3 @@ O.user_autocommands = {
   -- Calcurse
   { "BufRead,BufNewFile", "~/.calcurse/notes/*", "set filetype=markdown" },
 }
-
--- Additional Leader bindings for WhichKey
-O.user_which_key = {
-  d = {
-    name = "+Dictionary",
-    a = { "zg", "add to dict" },
-    c = { "z=", "corrections" },
-    d = { "<cmd>:set spell!<cr>", "toggle spell" },
-    f = { "1z=", "1st fix" },
-    n = { "]s", "next" },
-    p = { "[s", "prev" },
-  },
-}
