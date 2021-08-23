@@ -1,0 +1,6 @@
+require('maps')
+require('plugins')
+require('settings')
+require('statusline')
+vim.cmd('syntax enable')
+vim.cmd('colorscheme aurora')

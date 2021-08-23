@@ -5,6 +5,7 @@
 Configurations for:
 
 - LunarVim
+- Neovim
 - Julia
 - Bash
 - Bin
