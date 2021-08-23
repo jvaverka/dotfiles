@@ -47,3 +47,5 @@ alias today='date +"%A"'
 alias franklin="julia -O0 -e 'using Franklin; serve()'"
 # start pluto locally
 alias pluto="julia -O0 -e 'using Pluto; Pluto.run()'"
+# start jupyter through Julia
+alias jupyterjl="julia -e 'using IJulia; notebook(dir=pwd())'"
