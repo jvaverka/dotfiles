@@ -1,8 +1,13 @@
 # plugin install dir
-nvim/autoload
+nvim/.config/nvim/session
 
 # cache files
 *~
 
 # backup files
 *.bak
+
+# LunarVim
+lvim/.config/lvim/lv-settings.lua
+lvim/.config/lvim/spell
+lvim/.config/lvim/plugin
