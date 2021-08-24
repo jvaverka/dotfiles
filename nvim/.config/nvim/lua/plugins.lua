@@ -38,5 +38,16 @@ return require('packer').startup(function()
   use {{'dracula/vim', as = 'dracula'}, 'ChristianChiarulli/nvcode-color-schemes.vim'}
 
   use 'lervag/vimtex'
+
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 end)
 
