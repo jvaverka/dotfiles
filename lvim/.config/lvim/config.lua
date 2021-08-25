@@ -2,8 +2,17 @@
 lvim.format_on_save = true
 lvim.lint_on_save = true
 lvim.colorscheme = "tokyonight"
+-- python
 vim.cmd [[ let g:python3_host_prog = '/home/jake/opt/anaconda3/envs/neovim/bin/python3.9' ]]
 vim.cmd [[ let g:python_host_prog = '/home/jake/opt/anaconda3/envs/mypy2/bin/python2.7' ]]
+-- julia
+vim.cmd [[ let g:julia_spellcheck_docstrings = 1 ]]
+vim.cmd [[ let g:julia_spellcheck_strings = 1 ]]
+vim.cmd [[ let g:julia_spellcheck_comments = 1 ]]
+vim.cmd [[ let g:julia_highlight_operators = 1 ]]
+vim.cmd [[ let g:julia_indent_align_import = 1 ]]
+vim.cmd [[ let g:julia_indent_align_brackets = 1 ]]
+vim.cmd [[ let g:julia_indent_align_funcargs = 1 ]]
 
 -- vim options
 vim.opt.relativenumber = true
@@ -142,6 +151,7 @@ lvim.plugins = {
       }
     end,
   },
+  {"JuliaEditorSupport/julia-vim"}
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
