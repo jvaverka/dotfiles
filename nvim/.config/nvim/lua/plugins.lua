@@ -10,13 +10,20 @@ return require('packer').startup(function()
   use_rocks {'lua-resty-http', 'lpeg'}
 
   -- Plugins can have post-install/update hooks
-  use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
+  use {
+    'iamcco/markdown-preview.nvim',
+    run = 'cd app && yarn install',
+    cmd = 'MarkdownPreview'
+  }
 
   -- Post-install/update hook with neovim command
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Post-install/update hook with call of vimscript function with argument
-  use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
+  use {
+    'glacambre/firenvim',
+    run = function() vim.fn['firenvim#install'](0) end
+  }
 
   -- Use specific branch, dependency and run lua file after load
   use {
@@ -27,17 +34,23 @@ return require('packer').startup(function()
 
   -- Use dependency and run lua function after load
   use {
-    'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
+    'lewis6991/gitsigns.nvim',
+    requires = { 'nvim-lua/plenary.nvim' },
     config = function() require('gitsigns').setup() end
   }
 
   -- You can specify multiple plugins in a single call
-  use {'tjdevries/colorbuddy.vim', {'JuliaEditorSupport/julia-vim', opt = true}}
+  use {
+    'tjdevries/colorbuddy.vim',
+    'ChristianChiarulli/nvcode-color-schemes.vim',
+    -- You can alias plugin names
+    {'dracula/vim', as = 'dracula'},
+  }
 
-  -- You can alias plugin names
-  use {{'dracula/vim', as = 'dracula'}, 'ChristianChiarulli/nvcode-color-schemes.vim'}
-
-  use 'lervag/vimtex'
+  use {
+    'lervag/vimtex',
+    'JuliaEditorSupport/julia-vim'
+  }
 
   use {
     "folke/which-key.nvim",
