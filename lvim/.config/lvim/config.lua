@@ -1,7 +1,7 @@
 -- general
 lvim.format_on_save = true
 lvim.lint_on_save = true
-lvim.colorscheme = "nvcode"
+lvim.colorscheme = "tokyonight"
 vim.cmd [[ let g:python3_host_prog = '/home/jake/opt/anaconda3/envs/neovim/bin/python3.9' ]]
 vim.cmd [[ let g:python_host_prog = '/home/jake/opt/anaconda3/envs/mypy2/bin/python2.7' ]]
 

@@ -134,7 +134,7 @@ export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
 
 # a nice little greeting
 toilet "welcome back, jake" -f wideterm -F border -F gay
-fortune
+fortune | toilet -f term -F gay
 
 # Node Package Manager
 export NVM_DIR="$HOME/.nvm"
