@@ -60,6 +60,7 @@ lvim.builtin.which_key.mappings["Q"]= {
   d = { "<cmd>lua require('persistence').stop()<cr>", "Quit without saving session" },
 }
 lvim.builtin.which_key.mappings[">"] = { "<cmd>ToggleTerm<CR>", "Terminal" }
+lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {"nb -i", "n", "Notebook"}
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
