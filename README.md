@@ -10,6 +10,7 @@ Configurations for:
 - Bash
 - Bin
 - Git
+- X
 - Alacritty
 
 ## Install
