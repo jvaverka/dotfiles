@@ -43,6 +43,10 @@ lvim.builtin.telescope.on_config_done = function()
 end
 
 -- Use which-key to add extra bindings with the leader-key prefix
+lvim.builtin.which_key.mappings["]"] = { "<cmd>ToggleTerm<cr>", "Terminal" }
+lvim.builtin.which_key.mappings["d"] = { "<cmd>Telescope fd hidden=true search_dirs={'~/.dotfiles/'}<cr>", "DotFiles"}
+lvim.builtin.which_key.mappings["j"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/blog/'}<cr>", "JakeV.xyz"}
+lvim.builtin.which_key.mappings["m"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/school/'}<cr>", "Masters"}
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Trouble",
   r = { "<cmd>Trouble lsp_references<cr>", "References" },
@@ -59,11 +63,9 @@ lvim.builtin.which_key.mappings["Q"]= {
   l = { "<cmd>lua require('persistence').load(last=true)<cr>", "Restore last session" },
   d = { "<cmd>lua require('persistence').stop()<cr>", "Quit without saving session" },
 }
-lvim.builtin.which_key.mappings["]"] = { "<cmd>ToggleTerm<cr>", "Terminal" }
+
+-- Use toggle terminal to add custom bindings for some executable
 lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = { "nb -i", "n", "Notebook" }
-lvim.builtin.which_key.mappings["d"] = { "<cmd>Telescope fd hidden=true search_dirs={'~/.dotfiles/'}<cr>", "DotFiles"}
-lvim.builtin.which_key.mappings["j"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/blog/'}<cr>", "JakeV.xyz"}
-lvim.builtin.which_key.mappings["m"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/school/'}<cr>", "Masters"}
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
