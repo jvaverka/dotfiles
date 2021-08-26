@@ -61,6 +61,9 @@ lvim.builtin.which_key.mappings["Q"]= {
 }
 lvim.builtin.which_key.mappings["]"] = { "<cmd>ToggleTerm<cr>", "Terminal" }
 lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = { "nb -i", "n", "Notebook" }
+lvim.builtin.which_key.mappings["d"] = { "<cmd>Telescope fd hidden=true search_dirs={'~/.dotfiles/'}<cr>", "DotFiles"}
+lvim.builtin.which_key.mappings["j"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/blog/'}<cr>", "JakeV.xyz"}
+lvim.builtin.which_key.mappings["m"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/school/'}<cr>", "Masters"}
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
