@@ -21,16 +21,17 @@ require("user.python-paths")
 -- Language
 -- =========================================
 lvim.lsp.diagnostics.virtual_text = false
-lvim.lang.markdown = {}
 require("user.json-schemas").setup()
 
 -- Extras
 -- =========================================
 lvim.extras = {
-  bqf              = {  active = true  },
-  codi             = {  active = true  },
+  bqf              = {  active = false },
+  codi             = {  active = false },
   colorizer        = {  active = true  },
   dial             = {  active = true  },
+  fancy_lualine    = {  active = true  },
+  fancy_theme      = {  active = true  },
   gps              = {  active = true  },
   hop              = {  active = true  },
   julia_vim        = {  active = true  },
@@ -55,6 +56,13 @@ lvim.extras = {
 -- Builtin Plugins
 -- =========================================
 require("user.builtins").config()
+
+-- StatusLine
+-- =========================================
+if lvim.extras.fancy_lualine.active and
+   lvim.extras.fancy_theme.active then
+  require("user.lualine").config()
+end
 
 -- Additional Plugins
 -- =========================================
