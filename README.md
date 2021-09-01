@@ -47,24 +47,18 @@ stow -D */
 
 ## LunarVim?
 
-Blew away my Neovim config and switched to
-[LunarVim](https://github.com/ChristianChiarulli/LunarVim)
-for several reasons:
+[LunarVim](https://github.com/ChristianChiarulli/LunarVim):
 
-1. LunarVim is faster
+1. LunarVim is fast
 1. LunarVim has a community of developers
-    1. Which now includes me
-1. LunarVim reduces external dependencies by leveraging Neovim 0.5+ features
-    1. Like Treesitter
-    1. Like native LSP
-    1. I'm sure there's more but those two alone make it worth while
-1. LunarVim is entirely configured in lua
-    1. Matter of preference, but this works better for me
-1. LunarVim's predecessor (NVCode) was the inspiration for my config
-    1. LunarVim just does it better
+1. LunarVim reduces dependencies by leveraging native Neovim features like:
+   1. Treesitter
+   1. LSP
+   1. I'm sure there's more but those two alone make it worth while
+1. LunarVim is configured in lua
 
 What does all this mean?
-Means that all I need to track now is my `lv-config.lua`.
+I can have separate configurations for `vim`, `nvim`, & `lvim`.
 
 ## Privacy
 
@@ -75,6 +69,7 @@ Use the following command to stop tracking changes:
 ```shell
 git update-index --assume-unchanged <filename>
 ```
+
 Use the following command to resume tracking changes:
 
 ```shell
