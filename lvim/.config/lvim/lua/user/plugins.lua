@@ -5,28 +5,28 @@ M.config = function ()
     {
       "andymass/vim-matchup",
       event = "CursorMoved",
-      disable = not lvim.extras.matchup.active,
-      config = function()
+      config = function ()
         require "user.matchup"
       end,
+      disable = not lvim.extras.matchup.active,
     },
     {
       "folke/persistence.nvim",
       event = "VimEnter",
       module = "persistence",
-      disable = not lvim.extras.persistence.active,
       config = function ()
         require("user.persistence").config()
       end,
+      disable = not lvim.extras.persistence.active,
     },
     {
       "folke/todo-comments.nvim",
       event = "BufRead",
       requires = "nvim-lua/plenary.nvim",
-      disable = not lvim.extras.todo_comments.active,
       config = function ()
         require("user.todo-comments").config()
       end,
+      disable = not lvim.extras.todo_comments.active,
     },
 		{
       "folke/tokyonight.nvim",
@@ -38,26 +38,26 @@ M.config = function ()
       "folke/trouble.nvim",
       cmd = "Trouble",
       requires = "kyazdani42/nvim-web-devicons",
-      disable = not lvim.extras.trouble.active,
       config = function ()
         require("user.trouble").config()
       end,
+      disable = not lvim.extras.trouble.active,
     },
     {
       "folke/twilight.nvim",
       event = "BufRead",
-      disable = not lvim.extras.twilight.active,
       config = function ()
         require("user.twilight").config()
       end,
+      disable = not lvim.extras.twilight.active,
     },
     {
       "folke/zen-mode.nvim",
       event = "BufRead",
-      disable = not lvim.extras.zen_mode.active,
       config = function ()
         require("user.zen").config()
       end,
+      disable = not lvim.extras.zen_mode.active,
     },
     {
       "iamcco/markdown-preview.nvim",
@@ -67,17 +67,17 @@ M.config = function ()
     },
     {
       "JuliaEditorSupport/julia-vim",
-      disable = not lvim.extras.julia_vim.active,
       config = function ()
         require "user.julia-vim"
       end,
+      disable = not lvim.extras.julia_vim.active,
     },
     {
       "karb94/neoscroll.nvim",
-      disable = not lvim.extras.neoscroll.active,
       config = function ()
         require("user.neoscroll").config()
       end,
+      disable = not lvim.extras.neoscroll.active,
     },
     {
       "kevinhwang91/nvim-bqf",
@@ -92,18 +92,18 @@ M.config = function ()
     {
       "monaqa/dial.nvim",
       event = "BufRead",
-      disable = not lvim.extras.dial.active,
-      config = function()
+      config = function ()
         require("user.dial").config()
       end,
+      disable = not lvim.extras.dial.active,
     },
     {
       "norcalli/nvim-colorizer.lua",
       event = "BufRead",
-      disable = not lvim.extras.colorizer.active,
       config = function ()
         require("user.colorizer").config()
       end,
+      disable = not lvim.extras.colorizer.active,
     },
     {
       "nvim-treesitter/playground",
@@ -113,57 +113,57 @@ M.config = function ()
     {
       "phaazon/hop.nvim",
       event = "BufRead",
-      disable = not lvim.extras.hop.active,
       config = function ()
         require("user.hop").config()
       end,
+      disable = not lvim.extras.hop.active,
     },
     {
       "ray-x/lsp_signature.nvim",
       event = "InsertEnter",
-      disable = not lvim.extras.lsp_signature.active,
       config = function ()
         require("user.lsp-signature").config()
       end,
+      disable = not lvim.extras.lsp_signature.active,
     },
     {
       "rcarriga/nvim-notify",
       event = "BufRead",
-      disable = not lvim.extras.notify.active,
-      config = function()
+      config = function ()
         require("user.notify").config()
       end,
+      disable = not lvim.extras.notify.active,
     },
     {
       "simrat39/symbols-outline.nvim",
       cmd = "SymbolsOutline",
-      disable = not lvim.extras.symbols_outline.active,
       config = function ()
         require("user.symbols-outline")
-      end
+      end,
+      disable = not lvim.extras.symbols_outline.active,
     },
     {
       "unblevable/quick-scope",
-      disable = not lvim.extras.quick_scope.active,
       config = function ()
         require "user.quickscope"
       end,
+      disable = not lvim.extras.quick_scope.active,
     },
     {
       "vuki656/package-info.nvim",
       ft = "json",
-      disable = not lvim.extras.package_info.active,
-      config = function()
+      config = function ()
         require("user.package-info").config()
       end,
+      disable = not lvim.extras.package_info.active,
     },
     {
       "windwp/nvim-spectre",
       event = "BufRead",
-      disable = not lvim.extras.spectre.active,
-      config = function()
+      config = function ()
         require("user.spectre").config()
       end,
+      disable = not lvim.extras.spectre.active,
     },
   }
 end
