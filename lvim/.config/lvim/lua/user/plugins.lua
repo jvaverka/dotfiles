@@ -90,6 +90,14 @@ M.config = function ()
       disable = not lvim.extras.codi.active,
     },
     {
+      "monaqa/dial.nvim",
+      event = "BufRead",
+      disable = not lvim.extras.dial.active,
+      config = function()
+        require("user.dial").config()
+      end,
+    },
+    {
       "norcalli/nvim-colorizer.lua",
       event = "BufRead",
       disable = not lvim.extras.colorizer.active,
@@ -139,6 +147,14 @@ M.config = function ()
       disable = not lvim.extras.quick_scope.active,
       config = function ()
         require "user.quickscope"
+      end,
+    },
+    {
+      "vuki656/package-info.nvim",
+      ft = "json",
+      disable = not lvim.extras.package_info.active,
+      config = function()
+        require("user.package-info").config()
       end,
     },
     {
