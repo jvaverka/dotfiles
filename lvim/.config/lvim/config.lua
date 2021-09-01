@@ -34,6 +34,7 @@ lvim.extras = {
   gps              = {  active = true  },
   hop              = {  active = true  },
   julia_vim        = {  active = true  },
+  lastplace        = {  active = true  },
   lsp_signature    = {  active = true  },
   markdown_preview = {  active = true  },
   matchup          = {  active = true  },

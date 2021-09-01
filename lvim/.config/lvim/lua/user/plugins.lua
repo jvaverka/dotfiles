@@ -11,6 +11,14 @@ M.config = function ()
       disable = not lvim.extras.matchup.active,
     },
     {
+      "ethanholz/nvim-lastplace",
+      event = "BufWinEnter",
+      config = function ()
+        require("user.lastplace").config()
+      end,
+      disable = not lvim.extras.lastplace.active,
+    },
+    {
       "folke/persistence.nvim",
       event = "VimEnter",
       module = "persistence",
