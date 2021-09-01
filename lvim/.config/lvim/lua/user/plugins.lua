@@ -143,6 +143,14 @@ M.config = function ()
       disable = not lvim.extras.symbols_outline.active,
     },
     {
+      "SmiteshP/nvim-gps",
+      requires = "nvim-treesitter/nvim-treesitter",
+      config = function ()
+        require("user.gps").config()
+      end,
+      disable = not lvim.extras.gps.active,
+    },
+    {
       "unblevable/quick-scope",
       config = function ()
         require "user.quickscope"

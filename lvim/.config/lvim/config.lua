@@ -31,6 +31,7 @@ lvim.extras = {
   codi             = {  active = true  },
   colorizer        = {  active = true  },
   dial             = {  active = true  },
+  gps              = {  active = true  },
   hop              = {  active = true  },
   julia_vim        = {  active = true  },
   lsp_signature    = {  active = true  },
