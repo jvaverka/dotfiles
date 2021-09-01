@@ -1,7 +1,7 @@
 -- LunarVim
 -- =========================================
 lvim.leader = "space"
-lvim.colorscheme = "spacegray"
+lvim.colorscheme = "onedarker"
 lvim.format_on_save = true
 lvim.lint_on_save = true
 lvim.transparent_window = false
