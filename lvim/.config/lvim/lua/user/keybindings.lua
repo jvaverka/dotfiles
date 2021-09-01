@@ -42,17 +42,21 @@ M.config = function ()
     }
   end
   lvim.builtin.which_key.mappings["m"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/school/'}<cr>", "Masters"}
-  lvim.builtin.which_key.mappings["o"] = { "<cmd>SymbolsOutline<cr>", "Symbol Outline" }
-  lvim.builtin.which_key.mappings["t"] = {
-    name = "+Trouble",
-    r = { "<cmd>Trouble lsp_references<cr>", "References" },
-    f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
-    d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnosticss" },
-    q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
-    l = { "<cmd>Trouble loclist<cr>", "LocationList" },
-    t = { "<cmd>TodoLocList<cr>", "Todo" },
-    w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnosticss" },
-  }
+  if lvim.extras.symbols_outline.active then
+    lvim.builtin.which_key.mappings["o"] = { "<cmd>SymbolsOutline<cr>", "Symbol Outline" }
+  end
+  if lvim.extras.trouble.active and lvim.extras.todo_comments.active then
+    lvim.builtin.which_key.mappings["t"] = {
+      name = "+Trouble",
+      r = { "<cmd>Trouble lsp_references<cr>", "References" },
+      f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+      d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnosticss" },
+      q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+      l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+      t = { "<cmd>TodoLocList<cr>", "Todo" },
+      w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnosticss" },
+    }
+  end
   lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
   if lvim.extras.persistence.active then
     lvim.builtin.which_key.mappings["Q"]= {
@@ -70,7 +74,9 @@ M.config = function ()
       f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Current Buffer" },
     }
   end
-  lvim.builtin.which_key.mappings["z"] = { "<cmd>ZenMode<cr>", "Zen" }
+  if lvim.extras.zen_mode.active then
+    lvim.builtin.which_key.mappings["z"] = { "<cmd>ZenMode<cr>", "Zen" }
+  end
 end
 
 return M
