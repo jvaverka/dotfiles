@@ -11,6 +11,18 @@ M.config = function ()
   }
   lvim.builtin.dashboard.session_directory = vim.loop.os_homedir() .. "/.cache/lvim/sessions/"
 
+  -- LspInstall
+  -- =========================================
+  lvim.lang.markdown = {
+    formatters = { { exe = "prettier" } },
+    linters = { { exe = "markdownlint" } },
+  }
+  lvim.builtin.lspinstall.on_config_done = function()
+    lvim.lang.tailwindcss.lsp.setup.filetypes = { "markdown" }
+    lvim.lang.tailwindcss.lsp.active = true
+    require("lsp").setup "tailwindcss"
+  end
+
   -- NvimTree
   -- =========================================
   lvim.builtin.nvimtree.auto_open = 0
