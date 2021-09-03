@@ -37,6 +37,7 @@ alias nv=nvim
 alias nvi=nvim
 alias v=vim
 alias vi=vim
+alias lunarvide="neovide --frameless --multiGrid -- -u ~/.local/share/lunarvim/lvim/init.lua --cmd 'set runtimepath+=~/.local/share/lunarvim/lvim'"
 # new commands
 alias path='echo -e ${PATH//:/\\n}'
 alias ldpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
