@@ -2,8 +2,8 @@
 -- =========================================
 lvim.leader = "space"
 lvim.colorscheme = "onedarker"
-lvim.format_on_save = true
-lvim.lint_on_save = true
+lvim.format_on_save = false
+lvim.lint_on_save = false
 lvim.transparent_window = false
 local _time = os.date "*t"
 if _time.hour < 6 then

@@ -13,3 +13,20 @@ vim.g.julia_highlight_operators   = 1
 vim.g.julia_indent_align_import   = 1
 vim.g.julia_indent_align_brackets = 1
 vim.g.julia_indent_align_funcargs = 1
+
+-- Mappings
+-- =========================================
+-- vim.g.julia_blocks = 1
+vim.g.julia_blocks_mappings = {
+  move_n = "]n",
+  move_N = "]e",
+  move_p = "[n",
+  move_P = "[e",
+  moveblock_n = "]]",
+  moveblock_N = "][",
+  moveblock_p = "[[",
+  moveblock_P = "[]",
+  select_a = "an",
+  select_i = "in",
+  whereami = "<space>jw",
+}

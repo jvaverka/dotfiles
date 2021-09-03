@@ -19,10 +19,12 @@ M.config = function ()
   -- WhichKey keybindings
   -- =========================================
   lvim.builtin.which_key.mappings["]"] = { "<cmd>ToggleTerm<cr>", "Terminal" }
+  lvim.builtin.which_key.mappings["0"] = { "<cmd>Telescope fd hidden=true search_dirs={'~/.dotfiles/'}<cr>", "DotFiles"}
+  lvim.builtin.which_key.mappings["1"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/school/'}<cr>", "Masters"}
+  lvim.builtin.which_key.mappings["2"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/blog/'}<cr>", "JakeV.xyz"}
   if lvim.extras.matchup.active then
     lvim.builtin.which_key.mappings["?"] = { "<cmd>MatchupWhereAmI??<cr>", "Where am I?" }
   end
-  lvim.builtin.which_key.mappings["d"] = { "<cmd>Telescope fd hidden=true search_dirs={'~/.dotfiles/'}<cr>", "DotFiles"}
   if lvim.extras.hop.active then
     lvim.builtin.which_key.mappings["H"] = {
       name = "+Hop",
@@ -34,14 +36,16 @@ M.config = function ()
       w = {"<cmd>HopWord<cr>", "Word"},
     }
   end
-  lvim.builtin.which_key.mappings["j"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/blog/'}<cr>", "JakeV.xyz"}
   if lvim.extras.julia_vim.active then
-    lvim.builtin.which_key.mappings["J"] = {
+    lvim.builtin.which_key.mappings["j"] = {
       name = "+Julia Vim",
+      a = {"<cmd>call julia#function_block2assign()<cr>", "Block to Assign"},
+      b = {"<cmd>call julia#function_assign2block()<cr>", "Assign to Block"},
       f = {"<cmd>call julia#toggle_function_blockassign()<cr>", "Function Toggle"},
+      h = {"<plug>(JuliaDocPrompt)", "Help"},
+      w = {"<cmd>call julia_blocks#whereami()<cr>", "Where am I?"}
     }
   end
-  lvim.builtin.which_key.mappings["m"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/school/'}<cr>", "Masters"}
   if lvim.extras.symbols_outline.active then
     lvim.builtin.which_key.mappings["o"] = { "<cmd>SymbolsOutline<cr>", "Symbol Outline" }
   end

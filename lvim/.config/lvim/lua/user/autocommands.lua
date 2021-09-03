@@ -8,6 +8,8 @@ M.config = function ()
     { "filetype", "markdown", "set comments=b:*,b:-,b:+,b:1.,n:>" },
     { "filetype", "markdown", "set colorcolumn=81" },
     { "filetype", "markdown", "set nofoldenable" },
+    -- Julia
+    { "FileType", "julia", "nmap <buffer> ? <Plug>(JuliaDocPrompt)" },
     -- Julia Markdown
     { "BufRead,BufNewFile", "*.jmd", "set filetype=markdown" },
     -- R Markdown
