@@ -46,6 +46,14 @@ M.config = function ()
       w = {"<cmd>call julia_blocks#whereami()<cr>", "Where am I?"}
     }
   end
+  if lvim.extras.pomodoro.active then
+    lvim.builtin.which_key.mappings["m"] = {
+      name = "+Pomodoro",
+      b = { "<cmd>PomodoroStart<cr>", "Begin"},
+      e = { "<cmd>PomodoroStop<cr>", "End"},
+      s = { "<cmd>PomodoroStatus<cr>", "Status"},
+    }
+  end
   if lvim.extras.symbols_outline.active then
     lvim.builtin.which_key.mappings["o"] = { "<cmd>SymbolsOutline<cr>", "Symbol Outline" }
   end

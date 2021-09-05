@@ -126,6 +126,17 @@ M.config = function ()
       disable = not lvim.extras.playground.active,
     },
     {
+      "jvaverka/pomodoro.nvim",
+      requires = {
+        "MunifTanjim/nui.nvim",
+        "rcarriga/nvim-notify",
+      },
+      config = function ()
+        require("user.pomodoro").config()
+      end,
+      disable = not lvim.extras.pomodoro.active,
+    },
+    {
       "unblevable/quick-scope",
       config = function ()
         require "user.quickscope"

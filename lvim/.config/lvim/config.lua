@@ -14,6 +14,7 @@ end
 -- =========================================
 vim.opt.hlsearch = false
 vim.opt.relativenumber = true
+vim.opt.scrolloff = 10
 vim.opt.timeoutlen = 100
 vim.opt.wrap = false
 require("user.python-paths")
@@ -55,10 +56,11 @@ lvim.extras = {
   markdown_preview = {  active = true  },
   matchup          = {  active = true  },
   neoscroll        = {  active = true  },
-  notify           = {  active = false },
+  notify           = {  active = true  },
   package_info     = {  active = true  },
   persistence      = {  active = true  },
   playground       = {  active = true  },
+  pomodoro         = {  active = true  },
   quick_scope      = {  active = true  },
   spectre          = {  active = true  },
   symbols_outline  = {  active = true  },
