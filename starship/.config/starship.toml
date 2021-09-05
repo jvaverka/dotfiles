@@ -1,3 +1,4 @@
+# Override all with custom format
 # format = """
 # [┌─────────────────── ](bold purple)[λ](bold green)
 # [│](bold purple)$directory$rust$package

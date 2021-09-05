@@ -12,6 +12,7 @@ Configurations for:
 - Git
 - X
 - Alacritty
+- Starship
 
 ## Install
 
