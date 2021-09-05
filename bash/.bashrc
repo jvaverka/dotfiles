@@ -143,3 +143,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # FZF Key Bindings
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Starship Prompt
+eval "$(starship init bash)"

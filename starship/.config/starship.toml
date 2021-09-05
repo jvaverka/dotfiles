@@ -1,0 +1,55 @@
+# format = """
+# [┌─────────────────── ](bold purple)[λ](bold green)
+# [│](bold purple)$directory$rust$package
+# [└─ ❯](bold purple) """
+
+[docker_context]
+symbol = " "
+style = "bold blue"
+
+[dotnet]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[golang]
+symbol = " "
+style = "bold green"
+
+[java]
+symbol = " "
+style = "bold red"
+
+[lua]
+symbol = " "
+style = "bold yellow"
+
+[perl]
+symbol = " "
+style = "bold blue"
+
+[php]
+symbol = " "
+style = "bold white"
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = " "
+style = "bold blue"
+
+[ruby]
+symbol = " "
+style = "bold red"
+
+[rust]
+symbol = " "
+style = "bold white"
+
+[shell]
+bash_indicator = " "

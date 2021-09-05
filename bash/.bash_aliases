@@ -14,6 +14,13 @@ alias less='less -eM'
 alias m=more
 alias p=pwd
 # files
+alias e='exa -l --icons'              # try something new
+alias ea='exa -la --icons'            # try something new
+alias ei='exa --icons'                # icons
+alias eii='exa -l --icons'            # icons long
+alias er='exa -R'                     # recursive
+alias et='exa -l --icons -s changed'  # recently changed
+alias etree='exa -T --icons'          # tree
 alias l='ls -CF'        # short and sweet
 alias la='ls -A'        # show hidden files
 alias lat='ls -lArt'    # show hidden files and sort by reverse date
@@ -32,6 +39,8 @@ alias ...='cd ../..'
 alias md='mkdir -p'
 alias up='cd ..'
 # editors
+alias lv=lvim
+alias lvi=lvim
 alias n=nvim
 alias nv=nvim
 alias nvi=nvim
@@ -39,6 +48,7 @@ alias v=vim
 alias vi=vim
 alias lunarvide="neovide --frameless --multiGrid -- -u ~/.local/share/lunarvim/lvim/init.lua --cmd 'set runtimepath+=~/.local/share/lunarvim/lvim'"
 # new commands
+alias cat=bat
 alias path='echo -e ${PATH//:/\\n}'
 alias ldpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 alias rn='date +"%T"'
