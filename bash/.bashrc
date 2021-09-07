@@ -146,3 +146,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Starship Prompt
 eval "$(starship init bash)"
+
+# Fix harfbuzz issue that crashes LibreOffice
+# export LD_PRELOAD=/lib/x86_64-linux-gnu/libharfbuzz-icu.so.0:/lib/x86_64-linux-gnu/libharfbuzz.so.0
