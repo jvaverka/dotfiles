@@ -128,8 +128,13 @@ M.config = function ()
     {
       "jvaverka/pomodoro.nvim",
       requires = {
-        "MunifTanjim/nui.nvim",
-        "rcarriga/nvim-notify",
+        {"MunifTanjim/nui.nvim"},
+        {
+          "rcarriga/nvim-notify",
+          config = function ()
+            require('user.notify').config()
+          end
+        },
       },
       config = function ()
         require("user.pomodoro").config()

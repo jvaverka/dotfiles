@@ -14,7 +14,7 @@ M.config = function ()
     timeout = 5000,
 
     -- For stages that change opacity this is treated as the highlight behind the window
-    background_colour = "Normal",
+    background_colour = "#24283b",
 
     -- Icons for the different levels
     icons = {
@@ -47,33 +47,11 @@ M.config = function ()
     highlight NotifyDEBUGTitle  guifg=#8B8B8B
     highlight NotifyTRACETitle  guifg=#D484FF
 
-    highlight NotifyPOMSTARTBorder guifg=#F7768E
-    highlight NotifyPOMWARNBorder guifg=#E0AF68
-    highlight NotifyPOMOFFBorder guifg=#BB9AF7
-    highlight NotifyBREAKSTARTBorder guifg=#7DCFFF
-    highlight NotifyBREAKWARNBorder guifg=#7AA2F7
-    highlight NotifyPOMSTARTIcon guifg=#F7768E
-    highlight NotifyPOMWARNIcon guifg=#E0AF68
-    highlight NotifyPOMOFFIcon guifg=#BB9AF7
-    highlight NotifyBREAKSTARTIcon guifg=#7DCFFF
-    highlight NotifyBREAKWARNIcon guifg=#7AA2F7
-    highlight NotifyPOMSTARTTitle guifg=#F7768E
-    highlight NotifyPOMWARNTitle guifg=#E0AF68
-    highlight NotifyPOMOFFTitle guifg=#BB9AF7
-    highlight NotifyBREAKSTARTTitle guifg=#7DCFFF
-    highlight NotifyBREAKWARNTitle guifg=#7AA2F7
-
     highlight link NotifyERRORBody Normal
     highlight link NotifyWARNBody Normal
     highlight link NotifyINFOBody Normal
     highlight link NotifyDEBUGBody Normal
     highlight link NotifyTRACEBody Normal
-
-    highlight link NotifyPOMSTARTBody Normal
-    highlight link NotifyPOMWARNBody Normal
-    highlight link NotifyPOMOFFBody Normal
-    highlight link NotifyBREAKSTARTBody Normal
-    highlight link NotifyBREAKWARNBody Normal
   ]]
   -- set notify as neovim's default notification method
   vim.notify = notify
