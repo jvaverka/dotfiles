@@ -18,7 +18,7 @@ symbol = " "
 symbol = " "
 
 [golang]
-symbol = " "
+symbol = " "
 style = "bold green"
 
 [java]
