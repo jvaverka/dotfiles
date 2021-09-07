@@ -17,6 +17,7 @@ vim.opt.relativenumber = true
 vim.opt.scrolloff = 10
 vim.opt.timeoutlen = 100
 vim.opt.wrap = false
+vim.bo.textwidth = 80
 require("user.python-paths")
 
 -- Neovide
@@ -42,32 +43,32 @@ require("user.json-schemas").setup()
 -- Extras
 -- =========================================
 lvim.extras = {
-  bqf              = {  active = false },
-  codi             = {  active = false },
-  colorizer        = {  active = true  },
-  dial             = {  active = true  },
-  fancy_lualine    = {  active = true  },
-  fancy_theme      = {  active = true  },
-  gps              = {  active = true  },
-  hop              = {  active = true  },
-  julia_vim        = {  active = true  },
-  lastplace        = {  active = true  },
-  lsp_signature    = {  active = true  },
-  markdown_preview = {  active = true  },
-  matchup          = {  active = true  },
-  neoscroll        = {  active = true  },
-  notify           = {  active = true  },
-  package_info     = {  active = true  },
-  persistence      = {  active = true  },
-  playground       = {  active = true  },
-  pomodoro         = {  active = true  },
-  quick_scope      = {  active = true  },
-  spectre          = {  active = true  },
-  symbols_outline  = {  active = true  },
-  todo_comments    = {  active = true  },
-  trouble          = {  active = true  },
-  twilight         = {  active = true  },
-  zen_mode         = {  active = true  },
+  bqf              = {  active = true },
+  codi             = {  active = true },
+  colorizer        = {  active = true },
+  dial             = {  active = true },
+  fancy_lualine    = {  active = true },
+  fancy_theme      = {  active = true },
+  gps              = {  active = true },
+  hop              = {  active = true },
+  julia_vim        = {  active = true },
+  lastplace        = {  active = true },
+  lsp_signature    = {  active = true },
+  markdown_preview = {  active = true },
+  matchup          = {  active = true },
+  neoscroll        = {  active = true },
+  notify           = {  active = true },
+  package_info     = {  active = true },
+  persistence      = {  active = true },
+  playground       = {  active = true },
+  pomodoro         = {  active = true },
+  quick_scope      = {  active = true },
+  spectre          = {  active = true },
+  symbols_outline  = {  active = true },
+  todo_comments    = {  active = true },
+  trouble          = {  active = true },
+  twilight         = {  active = true },
+  zen_mode         = {  active = true },
 }
 
 -- Builtin Plugins
