@@ -1,5 +1,5 @@
 # Transparency
-background_opacity: 0.92
+background_opacity: 0.82
 
 # Colors (TokyoNight)
 colors:
@@ -30,18 +30,18 @@ colors:
 
 font:
   normal:
-    family: "Hasklug Nerd Font"
+    family: "FiraCode Nerd Font"
     style: Regular
   bold:
-    family: "Hasklug Nerd Font"
+    family: "FiraCode Nerd Font"
     style: Bold
   italic:
-    family: "Hasklug Nerd Font"
+    family: "FiraCode Nerd Font"
     style: Italic
   bold_italic:
-    family: "Hasklug Nerd Font"
+    family: "FiraCode Nerd Font"
     style: Bold Italic
-  size: 16.0
+  size: 14.0
 
   offset:
     x: 0

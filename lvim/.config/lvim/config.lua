@@ -21,7 +21,7 @@ require("user.python-paths")
 
 -- Neovide
 -- =========================================
-vim.opt.guifont = "Hasklug Nerd Font:h18"
+vim.opt.guifont = "FiraCode Nerd Font:h18"
 vim.g.neovide_fullscreen = true -- whether the app should take up the entire screen
 vim.g.neovide_cursor_animation_length = 0.13 -- time it takes for the cursor to complete it's animation in seconds
 vim.g.neovide_cursor_trail_length = 0.8 -- determines how much the trail of the cursor lags behind the front edge
