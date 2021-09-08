@@ -1,3 +1,7 @@
+-- Julia Markdown
+-- =========================================
+vim.g.latex_to_unicode_file_types = {"julia", "markdown"}
+
 -- Spellcheck
 -- =========================================
 vim.g.julia_spellcheck_docstrings = 1
