@@ -45,7 +45,11 @@ M.config = function ()
   -- Terminal
   -- =========================================
   lvim.builtin.terminal.active = true
-  lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = { "nb -i", "n", "Notebook" }
+  lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {
+    "nb -i",
+    "n",
+    "Notebook"
+  }
 
   -- TreeSitter
   -- =========================================
