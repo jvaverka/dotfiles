@@ -2,7 +2,7 @@ xterm*selectToClipboard: true
 xterm*disallowedWindowOps: 20,21,SetXProp
 
 ! font
-st.font:	FiraCode Nerd Font:size=16:antialias=true:autohint=true;
+st.font:	FiraCode Nerd Font:size=14:antialias=true:autohint=true;
 
 ! transparency
 st.alpha: 0.8
