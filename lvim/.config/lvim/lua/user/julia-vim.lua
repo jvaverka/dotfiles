@@ -1,20 +1,24 @@
--- Julia Markdown
+-- Unicode
 -- =========================================
 vim.g.latex_to_unicode_file_types = {"julia", "markdown"}
+vim.g.latex_to_unicode_auto = true
+-- fix freeze when tab with no text
+vim.g.latex_to_unicode_tab = "off"
+vim.g.latex_to_unicode_keymap = 1
 
 -- Spellcheck
 -- =========================================
 vim.g.julia_spellcheck_docstrings = 1
-vim.g.julia_spellcheck_strings    = 1
-vim.g.julia_spellcheck_comments   = 1
+vim.g.julia_spellcheck_strings = 1
+vim.g.julia_spellcheck_comments = 1
 
 -- Highlight
 -- =========================================
-vim.g.julia_highlight_operators   = 1
+vim.g.julia_highlight_operators = 1
 
 -- Indent
 -- =========================================
-vim.g.julia_indent_align_import   = 1
+vim.g.julia_indent_align_import = 1
 vim.g.julia_indent_align_brackets = 1
 vim.g.julia_indent_align_funcargs = 1
 
