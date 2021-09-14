@@ -39,7 +39,7 @@ M.config = function ()
   end
   if lvim.extras.julia_vim.active then
     lvim.builtin.which_key.mappings["j"] = {
-      name = "+Julia Vim",
+      name = "+Julia",
       a = {"<cmd>call julia#function_block2assign()<cr>", "Block to Assign"},
       b = {"<cmd>call julia#function_assign2block()<cr>", "Assign to Block"},
       f = {"<cmd>call julia#toggle_function_blockassign()<cr>", "Function Toggle"},
