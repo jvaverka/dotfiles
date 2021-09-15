@@ -40,11 +40,13 @@ M.config = function ()
   if lvim.extras.julia_vim.active then
     lvim.builtin.which_key.mappings["j"] = {
       name = "+Julia",
+      ['?'] = {"<cmd>call julia_blocks#whereami()<cr>", "Where am I?"},
       a = {"<cmd>call julia#function_block2assign()<cr>", "Block to Assign"},
       b = {"<cmd>call julia#function_assign2block()<cr>", "Assign to Block"},
       f = {"<cmd>call julia#toggle_function_blockassign()<cr>", "Function Toggle"},
       h = {"<plug>(JuliaDocPrompt)", "Help"},
-      w = {"<cmd>call julia_blocks#whereami()<cr>", "Where am I?"}
+      l = {"<cmd>:!literatejl %<cr>", "Literate"},
+      w = {"<cmd>:!weavejl %<cr>", "Weave"},
     }
   end
   if lvim.extras.pomodoro.active then
