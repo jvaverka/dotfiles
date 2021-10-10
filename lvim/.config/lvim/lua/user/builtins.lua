@@ -25,7 +25,7 @@ M.config = function ()
 
   -- NvimTree
   -- =========================================
-  lvim.builtin.nvimtree.auto_open = 0
+  -- lvim.builtin.nvimtree.auto_open = 0
   lvim.builtin.nvimtree.hide_dotfiles = 1
   lvim.builtin.nvimtree.side = "left"
   lvim.builtin.nvimtree.show_icons.git = 0
