@@ -7,7 +7,7 @@ end
 local function lsp_progress()
   local messages = vim.lsp.util.get_progress_messages()
   if #messages == 0 then
-    return
+    return ""
   end
   local status = {}
   for _, msg in pairs(messages) do
@@ -110,8 +110,8 @@ M.config = function()
     options = {
       icons_enabled = true,
       -- Disable sections and component separators
-      component_separators = "",
-      section_separators = "",
+      component_separators = { left = "", right = "" },
+      section_separators = { left = "", right = "" },
       theme = {
         -- We are going to use lualine_c an lualine_x as left and
         -- right section. Both are highlighted by c theme .  So we
@@ -144,14 +144,14 @@ M.config = function()
             vim.api.nvim_command(
               "hi! LualineModeInactive guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg_alt
             )
-            return ""
+            return " "
           end,
           color = "LualineModeInactive",
-          left_padding = 1,
+          padding = { left = 1, right = 0 },
         },
         {
           "filename",
-          condition = conditions.buffer_not_empty,
+          cond = conditions.buffer_not_empty,
           color = { fg = colors.blue, gui = "bold" },
         },
       },
@@ -174,25 +174,25 @@ M.config = function()
     function()
       -- auto change color according to neovims mode
       vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg)
-      return ""
+      return " "
     end,
 
     -- color = { fg = colors.red },
     color = "LualineMode",
-    left_padding = 1,
+    padding = { left = 1, right = 0 },
   }
 
   ins_left {
     "b:gitsigns_head",
     icon = " ",
     -- color = "LualineBranchMode",
-    condition = conditions.check_git_workspace,
+    cond = conditions.check_git_workspace,
     -- function()
     --   return "▊"
     -- end,
     -- -- color = "LualineMode",
     color = { fg = colors.blue }, -- Sets highlighting of component
-    left_padding = 0, -- We don't need space before this
+    padding = 0, -- We don't need space before this
   }
 
   ins_left {
@@ -217,12 +217,12 @@ M.config = function()
       end
       return format_file_size(file)
     end,
-    condition = conditions.buffer_not_empty,
+    cond = conditions.buffer_not_empty,
   }
 
   ins_left {
     "filename",
-    condition = conditions.buffer_not_empty,
+    cond = conditions.buffer_not_empty,
     color = { fg = colors.magenta, gui = "bold" },
   }
 
@@ -230,11 +230,13 @@ M.config = function()
     "diff",
     source = diff_source,
     symbols = { added = "  ", modified = "柳", removed = " " },
-    color_added = { fg = colors.git.add },
-    color_modified = { fg = colors.git.change },
-    color_removed = { fg = colors.git.delete },
+    diff_color = {
+      added = { fg = colors.git.add },
+      modified = { fg = colors.git.change },
+      removed = { fg = colors.git.delete },
+    },
     color = {},
-    condition = nil,
+    cond = nil,
   }
 
   ins_left {
@@ -254,17 +256,17 @@ M.config = function()
       return ""
     end,
     color = { fg = colors.green },
-    condition = conditions.hide_in_width,
+    cond = conditions.hide_in_width,
   }
 
   ins_left {
     gps.get_location,
-    condition = gps_available,
+    cond = gps_available,
   }
 
   ins_left {
     lsp_progress,
-    condition = conditions.hide_small,
+    cond = conditions.hide_small,
   }
 
   -- Insert mid section. You can make any number of sections in neovim :)
@@ -283,7 +285,7 @@ M.config = function()
     -- color_warn = { fg = colors.yellow },
     -- color_info = { fg = colors.cyan },
     -- color_hint = { fg = colors.blue },
-    condition = conditions.hide_in_width,
+    cond = conditions.hide_in_width,
   }
 
   ins_right {
@@ -293,10 +295,9 @@ M.config = function()
       end
       return ""
     end,
-    left_padding = 0,
-    right_padding = 0,
+    padding = 0,
     color = { fg = colors.green },
-    condition = conditions.hide_in_width,
+    cond = conditions.hide_in_width,
   }
 
   ins_right {
@@ -304,6 +305,9 @@ M.config = function()
       msg = msg or "LSP Inactive"
       local buf_clients = vim.lsp.buf_get_clients()
       if next(buf_clients) == nil then
+        if #msg == 0 then
+          return ""
+        end
         return msg
       end
       local buf_ft = vim.bo.filetype
@@ -352,27 +356,26 @@ M.config = function()
     end,
     icon = " ",
     color = { fg = colors.fg },
-    condition = conditions.hide_in_width,
+    cond = conditions.hide_in_width,
   }
 
   ins_right {
     "location",
-    left_padding = 0,
-    right_padding = 0,
+    padding = 0,
     color = { fg = colors.orange },
   }
 
   ins_right {
     "fileformat",
-    upper = true,
+    fmt = string.upper,
     icons_enabled = true, -- I think icons are cool but Eviline doesn't have them. sigh
     color = { fg = colors.green, gui = "bold" },
-    condition = conditions.hide_in_width,
+    cond = conditions.hide_in_width,
   }
 
   ins_right {
     clock,
-    condition = conditions.hide_in_width,
+    cond = conditions.hide_in_width,
     color = { fg = colors.blue, bg = colors.bg },
   }
 
@@ -385,10 +388,9 @@ M.config = function()
       local index = math.ceil(line_ratio * #chars)
       return chars[index]
     end,
-    left_padding = 0,
-    right_padding = 0,
+    padding = 0,
     color = { fg = colors.yellow, bg = colors.bg },
-    condition = nil,
+    cond = nil,
   }
 
   -- Now don't forget to initialize lualine
