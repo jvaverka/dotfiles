@@ -38,7 +38,6 @@ vim.g.neovide_cursor_vfx_particle_curl = 1.0 -- sets the ... I guess curl?  For 
 -- Language
 -- =========================================
 lvim.lsp.diagnostics.virtual_text = false
-require("user.json-schemas").setup()
 
 -- Extras
 -- =========================================
