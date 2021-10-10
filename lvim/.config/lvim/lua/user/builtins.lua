@@ -17,11 +17,11 @@ M.config = function ()
     formatters = { { exe = "prettier" } },
     linters = { { exe = "markdownlint" } },
   }
-  lvim.builtin.lspinstall.on_config_done = function()
-    lvim.lang.tailwindcss.lsp.setup.filetypes = { "markdown" }
-    lvim.lang.tailwindcss.lsp.active = true
-    require("lsp").setup "tailwindcss"
-  end
+  -- lvim.builtin.lspinstall.on_config_done = function()
+  --   lvim.lang.tailwindcss.lsp.setup.filetypes = { "markdown" }
+  --   lvim.lang.tailwindcss.lsp.active = true
+  --   require("lsp").setup "tailwindcss"
+  -- end
 
   -- NvimTree
   -- =========================================
