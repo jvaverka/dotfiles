@@ -1,7 +1,7 @@
 -- Unicode
 -- =========================================
 vim.g.latex_to_unicode_file_types = {"julia", "markdown"}
-vim.g.latex_to_unicode_auto = true
+vim.g.latex_to_unicode_auto = false
 -- fix freeze when tab with no text
 vim.g.latex_to_unicode_tab = "off"
 vim.g.latex_to_unicode_keymap = 1
