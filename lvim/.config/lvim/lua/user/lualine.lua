@@ -277,16 +277,30 @@ M.config = function()
     end,
   }
 
-  ins_right {
-    "diagnostics",
-    sources = { "nvim_lsp" },
-    symbols = { error = " ", warn = " ", info = " ", hint = " " },
-    -- color_error = { fg = colors.red },
-    -- color_warn = { fg = colors.yellow },
-    -- color_info = { fg = colors.cyan },
-    -- color_hint = { fg = colors.blue },
-    cond = conditions.hide_in_width,
-  }
+  local ok, _ = pcall(require, "vim.diagnostics")
+  if ok then
+    ins_right {
+      "diagnostics",
+      sources = { "nvim" },
+      symbols = { error = " ", warn = " ", info = " ", hint = " " },
+      -- color_error = { fg = colors.red },
+      -- color_warn = { fg = colors.yellow },
+      -- color_info = { fg = colors.cyan },
+      -- color_hint = { fg = colors.blue },
+      cond = conditions.hide_in_width,
+    }
+  else
+    ins_right {
+      "diagnostics",
+      sources = { "nvim_lsp" },
+      symbols = { error = " ", warn = " ", info = " ", hint = " " },
+      -- color_error = { fg = colors.red },
+      -- color_warn = { fg = colors.yellow },
+      -- color_info = { fg = colors.cyan },
+      -- color_hint = { fg = colors.blue },
+      cond = conditions.hide_in_width,
+    }
+  end
 
   ins_right {
     function()
@@ -302,11 +316,11 @@ M.config = function()
 
   ins_right {
     function(msg)
-      msg = msg or "LSP Inactive"
+      msg = msg or "LS Inactive"
       local buf_clients = vim.lsp.buf_get_clients()
       if next(buf_clients) == nil then
-        if #msg == 0 then
-          return ""
+        if type(msg) == "boolean" or #msg == 0 then
+          return "LS Inactive"
         end
         return msg
       end
@@ -315,8 +329,8 @@ M.config = function()
       local trim = vim.fn.winwidth(0) < 120
 
       -- add client
-      local utils = require "lsp.utils"
-      local active_client = utils.get_active_client_by_ft(buf_ft)
+      -- local utils = require "lsp.utils"
+      -- local active_client = utils.get_active_client_by_ft(buf_ft)
       for _, client in pairs(buf_clients) do
         if client.name ~= "null-ls" then
           local _added_client = client.name
@@ -326,7 +340,7 @@ M.config = function()
           table.insert(buf_client_names, _added_client)
         end
       end
-      vim.list_extend(buf_client_names, active_client or {})
+      -- vim.list_extend(buf_client_names, active_client or {})
 
       -- add formatter
       local formatters = require "lsp.null-ls.formatters"
