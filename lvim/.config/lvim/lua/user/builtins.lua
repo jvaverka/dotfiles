@@ -46,6 +46,11 @@ M.config = function ()
   -- =========================================
   lvim.builtin.terminal.active = true
   lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {
+    "calcurse",
+    "C",
+    "Calcurse"
+  }
+  lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {
     "nb -i",
     "n",
     "Notebook"
