@@ -21,7 +21,7 @@ M.config = function ()
   lvim.builtin.which_key.mappings["]"] = { "<cmd>ToggleTerm<cr>", "Terminal" }
   lvim.builtin.which_key.mappings["0"] = { "<cmd>Telescope fd hidden=true search_dirs={'~/.dotfiles/'}<cr>", "DotFiles"}
   lvim.builtin.which_key.mappings["1"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/school/'}<cr>", "Masters"}
-  lvim.builtin.which_key.mappings["2"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/blog/'}<cr>", "JakeV.xyz"}
+  lvim.builtin.which_key.mappings["2"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/blog/'}<cr>", "Blog"}
   lvim.builtin.which_key.mappings["8"] = { "gqG", "80 Lines"}
   if lvim.extras.matchup.active then
     lvim.builtin.which_key.mappings["?"] = { "<cmd>MatchupWhereAmI??<cr>", "Where am I?" }
