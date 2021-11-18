@@ -198,6 +198,13 @@ M.config = function ()
       end,
       disable = not lvim.extras.zen_mode.active,
     },
+    {
+      "axvr/zepl.vim",
+      config = function ()
+        require "user.zepl"
+      end,
+      disable = not lvim.extras.zepl.active,
+    },
   }
 end
 

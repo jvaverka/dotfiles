@@ -68,6 +68,7 @@ lvim.extras = {
   trouble          = {  active = true  },
   twilight         = {  active = true  },
   zen_mode         = {  active = true  },
+  zepl             = {  active = true  },
 }
 
 -- Builtin Plugins
