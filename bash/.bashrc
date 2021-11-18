@@ -136,7 +136,7 @@ export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
 toilet "welcome back, jake" -f wideterm -F border -F gay
 fortune | toilet -f term -F gay
 
-# Node Package Manager
+# Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

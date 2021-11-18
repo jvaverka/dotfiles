@@ -49,18 +49,15 @@ stow -D */
 
 ## LunarVim?
 
-[LunarVim](https://github.com/ChristianChiarulli/LunarVim):
+[LunarVim](https://github.com/LunarVim/LunarVim):
 
+1. LunarVim is easy
 1. LunarVim is fast
-1. LunarVim has a community of developers
-1. LunarVim reduces dependencies by leveraging native Neovim features like:
-   1. Treesitter
-   1. LSP
-   1. I'm sure there's more but those two alone make it worth while
+1. LunarVim is light
+1. LunarVim is community driven
 1. LunarVim is configured in lua
 
-What does all this mean?
-I can have separate configurations for `vim`, `nvim`, & `lvim`.
+One can have separate configurations for `vim`, `nvim`, & `lvim`.
 
 ## Privacy
 
