@@ -10,7 +10,7 @@ nc="\033[m"
 
 REPO_NAME=`basename $(pwd)`
 GITHUB_USERNAME=jvaverka
-GITLAB_USERNAME=Vaverka
+GITLAB_USERNAME=jvaverka
 
 echo -e "Adding a ${bold}remote${nc} called ${cyan}all${nc}"
 git remote add all git@gitlab.com:$GITLAB_USERNAME/$REPO_NAME.git
