@@ -57,8 +57,8 @@ M.config = function ()
   }
   lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {
     "julia --project -e \"using Pkg; Pkg.test()\"; sleep 5",
-    "jt",
-    "Test Package"
+    "ju",
+    "Unittest"
   }
 
   -- TreeSitter

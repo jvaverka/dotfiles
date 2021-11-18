@@ -16,8 +16,8 @@ then
   exit
 fi
 
-# weave julia markdown files
+# tangle julia markdown files
 julia -O0 -e "
   using Weave;
-  weave(normpath(@__DIR__, \"$filename\"), doctype = \"md2pdf\")
+  tangle(normpath(@__DIR__, \"$filename\"), out_path = :doc)
 "
