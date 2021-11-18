@@ -13,6 +13,7 @@ Configurations for:
 - X
 - Alacritty
 - Starship
+- Newsboat
 
 ## Install
 
