@@ -40,6 +40,7 @@ M.config = function ()
   if lvim.extras.julia_vim.active then
     lvim.builtin.which_key.mappings["j"] = {
       name = "+Julia",
+      ['.'] = {"<cmd>:!julia -e 'using JuliaFormatter; format(\".\", BlueStyle())'<cr>", "Format Dir"},
       ['?'] = {"<cmd>call julia_blocks#whereami()<cr>", "Where am I?"},
       a = {"<cmd>call julia#function_block2assign()<cr>", "Block to Assign"},
       b = {"<cmd>call julia#function_assign2block()<cr>", "Assign to Block"},
