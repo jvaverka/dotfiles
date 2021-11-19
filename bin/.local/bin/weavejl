@@ -17,7 +17,7 @@ then
 fi
 
 # weave julia markdown files
-julia -O0 -e "
+julia --project -O0 -e "
   using Weave;
-  weave(normpath(@__DIR__, \"$filename\"), doctype = \"md2pdf\")
+  weave(normpath(@__DIR__, \"$filename\"))
 "
