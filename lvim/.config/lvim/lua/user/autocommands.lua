@@ -14,6 +14,9 @@ M.config = function ()
     { "filetype", "markdown", "set comments=b:*,b:-,b:+,b:1.,n:>" },
     { "filetype", "markdown", "set colorcolumn=81" },
     { "filetype", "markdown", "set nofoldenable" },
+    { "filetype", "markdown", "set tabstop=4" },
+    { "filetype", "markdown", "set softtabstop=4" },
+    { "filetype", "markdown", "set shiftwidth=4" },
     -- R Markdown
     { "BufRead,BufNewFile", "*.rmd", "set filetype=rmarkdown" },
     { "filetype", "rmarkdown", "set nofoldenable" },
