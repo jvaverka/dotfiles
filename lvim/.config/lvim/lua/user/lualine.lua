@@ -100,12 +100,6 @@ M.config = function()
   }
 
   -- Config
-  -- cool       icons
-  -- flight     icons
-  -- misc           icons
-  -- nature        icons
-  -- space         icons
-  -- tech       icons
   local config = {
     options = {
       icons_enabled = true,
@@ -144,7 +138,7 @@ M.config = function()
             vim.api.nvim_command(
               "hi! LualineModeInactive guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg_alt
             )
-            return " "
+            return " "
           end,
           color = "LualineModeInactive",
           padding = { left = 1, right = 0 },
@@ -174,7 +168,7 @@ M.config = function()
     function()
       -- auto change color according to neovims mode
       vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg)
-      return " "
+      return " "
     end,
 
     -- color = { fg = colors.red },
