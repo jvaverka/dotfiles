@@ -51,7 +51,7 @@ M.config = function ()
     "Calcurse"
   }
   lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {
-    "nb -i",
+    "nb shell",
     "n",
     "Notebook"
   }
