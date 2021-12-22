@@ -53,10 +53,10 @@ alias ldpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 alias rn='date +"%T"'
 alias todate='date +"%d-%m-%Y"'
 alias today='date +"%A"'
-alias wttr='curl wttr.in/Gainesville+GA'       # normal (v1)
-alias wttrd='curl v2d.wttr.in/Gainesville+GA'  # data-rich (v2) nerd-font day
-alias wttre='curl v2.wttr.in/Gainesville+GA'   # data-rich (v2) emoji
-alias wttrn='curl v2n.wttr.in/Gainesville+GA'  # data-rich (v2) nerd-font night
+alias wttr='curl wttr.in/Gainesville+GA?u'       # normal (v1)
+alias wttrd='curl v2d.wttr.in/Gainesville+GA?u'  # data-rich (v2) nerd-font day
+alias wttre='curl v2.wttr.in/Gainesville+GA?u'   # data-rich (v2) emoji
+alias wttrn='curl v2n.wttr.in/Gainesville+GA?u'  # data-rich (v2) nerd-font night
 # run blog locally
 alias franklin="julia -O0 -e 'using Franklin; serve()'"
 # start pluto locally
