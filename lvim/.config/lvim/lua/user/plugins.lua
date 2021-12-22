@@ -191,6 +191,9 @@ M.config = function ()
       disable = not lvim.extras.twilight.active,
     },
     {
+      "fladson/vim-kitty",
+    },
+    {
       "folke/zen-mode.nvim",
       event = "BufRead",
       config = function ()
