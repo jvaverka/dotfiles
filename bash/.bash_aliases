@@ -10,6 +10,7 @@ alias bc='bc -qli'
 alias c=clear
 alias gr=grep
 alias h='history'
+alias jp='julia --project'
 alias less='less -eM'
 alias m=more
 alias p=pwd
