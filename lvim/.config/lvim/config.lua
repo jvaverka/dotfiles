@@ -18,6 +18,7 @@ vim.opt.scrolloff = 10
 vim.opt.timeoutlen = 100
 vim.opt.wrap = false
 vim.bo.textwidth = 80
+vim.cmd [[ set cmdheight=1 ]]
 require("user.python-paths")
 
 -- Neovide
@@ -67,6 +68,7 @@ lvim.extras = {
   todo_comments    = {  active = true  },
   trouble          = {  active = true  },
   twilight         = {  active = true  },
+  vim_kitty        = {  active = true  },
   zen_mode         = {  active = true  },
   zepl             = {  active = true  },
 }

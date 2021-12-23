@@ -192,6 +192,7 @@ M.config = function ()
     },
     {
       "fladson/vim-kitty",
+      disable = not lvim.extras.vim_kitty.active,
     },
     {
       "folke/zen-mode.nvim",
