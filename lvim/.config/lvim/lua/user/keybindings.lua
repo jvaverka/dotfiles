@@ -47,6 +47,7 @@ M.config = function ()
       f = {"<cmd>call julia#toggle_function_blockassign()<cr>", "Function Toggle"},
       h = {"<plug>(JuliaDocPrompt)", "Help"},
       l = {"<cmd>:!literatejl %<cr>", "Literate"},
+      r = {"<cmd>:vert Repl julia<cr>", "Start Julia REPL"},
       t = {"<cmd>:!tanglejl %<cr>", "Tangle"},
       w = {"<cmd>:!weavejl %<cr>", "Weave"},
     }
