@@ -1,21 +1,26 @@
+-- Maps
+-- ========================
 local map = vim.api.nvim_set_keymap
 
--- map the leader key
-map('n', '<Space>', '', {})
-vim.g.mapleader = ' '  -- 'vim.g' sets global variables
+-- Leader
+-- ========================
+map('n', '<space>', '<nop>', {noremap = true, silent = true})
+vim.g.mapleader = ' '
 
--- map options
+-- Options
+-- ========================
 options = { noremap = true }
--- easier save & quit
-map('n', '<leader>w', ':w<cr>', options)
-map('n', '<leader>q', ':q<cr>', options)
--- buffer navigation
-map('n', '<leader>n', ':bnext<cr>', options)
-map('n', '<leader>p', ':bprev<cr>', options)
--- file exporing
-map('n', '<leader>e', ':Vex 30<cr>', options)
--- window navigation
-map('n', '<c-h>', '<c-w><c-h>', options)
-map('n', '<c-j>', '<c-w><c-j>', options)
-map('n', '<c-k>', '<c-w><c-k>', options)
-map('n', '<c-l>', '<c-w><c-l>', options)
+
+-- Bindings
+-- ========================
+map('n', '<leader>w', ':w<cr>', options)  -- easy save
+map('n', '<leader>q', ':q<cr>', options)  -- easy quit
+map('n', '<shift>l', ':bnext<cr>', options)  -- buffer nav
+map('n', '<shift>h', ':bprev<cr>', options)  -- buffer nav
+map('n', '<leader>e', ':NvimTreeToggle<cr>', options) -- file explorer
+map('n', '<c-h>', '<c-w><c-h>', options)  -- window nav
+map('n', '<c-j>', '<c-w><c-j>', options)  -- window nav
+map('n', '<c-k>', '<c-w><c-k>', options)  -- window nav
+map('n', '<c-l>', '<c-w><c-l>', options)  -- window nav
+map('i', 'jk', '<esc>', options)  -- I hate escape
+map('i', 'kj', '<esc>', options)  -- I hate escape
