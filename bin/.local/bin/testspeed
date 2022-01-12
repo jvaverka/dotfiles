@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# test network speed
+wget -O /dev/null -q --show-progress https://juliadatascience.io
