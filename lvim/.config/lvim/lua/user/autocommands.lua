@@ -10,16 +10,16 @@ M.config = function ()
     -- Julia Markdown
     { "BufRead,BufNewFile", "*.jmd", "set filetype=markdown" },
     -- Markdown
-    { "filetype", "markdown", "set formatoptions+=ro" },
-    { "filetype", "markdown", "set comments=b:*,b:-,b:+,b:1.,n:>" },
-    { "filetype", "markdown", "set colorcolumn=81" },
-    { "filetype", "markdown", "set nofoldenable" },
-    { "filetype", "markdown", "set tabstop=4" },
-    { "filetype", "markdown", "set softtabstop=4" },
-    { "filetype", "markdown", "set shiftwidth=4" },
+    { "FileType", "markdown", "set formatoptions+=ro" },
+    { "FileType", "markdown", "set comments=b:*,b:-,b:+,b:1.,n:>" },
+    { "FileType", "markdown", "set colorcolumn=81" },
+    { "FileType", "markdown", "set nofoldenable" },
+    { "FileType", "markdown", "set tabstop=4" },
+    { "FileType", "markdown", "set softtabstop=4" },
+    { "FileType", "markdown", "set shiftwidth=4" },
     -- R Markdown
     { "BufRead,BufNewFile", "*.rmd", "set filetype=rmarkdown" },
-    { "filetype", "rmarkdown", "set nofoldenable" },
+    { "FileType", "rmarkdown", "set nofoldenable" },
   }
 end
 
