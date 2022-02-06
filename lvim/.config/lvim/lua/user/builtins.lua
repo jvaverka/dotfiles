@@ -13,10 +13,10 @@ M.config = function ()
 
   -- LspInstall
   -- =========================================
-  lvim.lang.markdown = {
-    formatters = { { exe = "prettier" } },
-    linters = { { exe = "markdownlint" } },
-  }
+  -- lvim.lang.markdown = {
+  --   formatters = { { exe = "prettier" } },
+  --   linters = { { exe = "markdownlint" } },
+  -- }
   -- lvim.builtin.lspinstall.on_config_done = function()
   --   lvim.lang.tailwindcss.lsp.setup.filetypes = { "markdown" }
   --   lvim.lang.tailwindcss.lsp.active = true
@@ -26,7 +26,7 @@ M.config = function ()
   -- NvimTree
   -- =========================================
   -- lvim.builtin.nvimtree.auto_open = 0
-  lvim.builtin.nvimtree.hide_dotfiles = 1
+  -- lvim.builtin.nvimtree.hide_dotfiles = 1
   lvim.builtin.nvimtree.side = "left"
   lvim.builtin.nvimtree.show_icons.git = 0
 
@@ -47,17 +47,17 @@ M.config = function ()
   lvim.builtin.terminal.active = true
   lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {
     "calcurse",
-    "C",
+    "<A-c>",
     "Calcurse"
   }
   lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {
     "nb shell",
-    "n",
+    "<A-n>",
     "Notebook"
   }
   lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {
     "julia --project -e \"using Pkg; Pkg.test()\"; sleep 5",
-    "ju",
+    "<A-j>",
     "Unittest"
   }
 
