@@ -68,11 +68,11 @@ M.config = function ()
       name = "+Trouble",
       r = { "<cmd>Trouble lsp_references<cr>", "References" },
       f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
-      d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnosticss" },
+      d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnosticss" },
       q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
       l = { "<cmd>Trouble loclist<cr>", "LocationList" },
       t = { "<cmd>TodoLocList<cr>", "Todo" },
-      w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnosticss" },
+      w = { "<cmd>Trouble workspace_diagnostics<cr>", "Diagnosticss" },
     }
   end
   lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
