@@ -11,3 +11,6 @@ nvim/.config/nvim/session
 lvim/.config/lvim/lv-settings.lua
 lvim/.config/lvim/spell
 lvim/.config/lvim/plugin
+
+# Julia
+julia/.julia/environments/nvim-lspconfig/Manifest.toml
