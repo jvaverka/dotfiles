@@ -60,8 +60,8 @@ alias wttrd='curl v2d.wttr.in/Gainesville+GA?u'  # data-rich (v2) nerd-font day
 alias wttre='curl v2.wttr.in/Gainesville+GA?u'   # data-rich (v2) emoji
 alias wttrn='curl v2n.wttr.in/Gainesville+GA?u'  # data-rich (v2) nerd-font night
 # run blog locally
-alias franklin="julia -O0 -e 'using Franklin; serve()'"
+alias franklinjl="julia -O0 -e 'using Franklin; serve()'"
 # start pluto locally
-alias pluto="julia -O0 -e 'using Pluto; Pluto.run()'"
+alias plutojl="julia -O0 -e 'using Pluto; Pluto.run()'"
 # start jupyter through Julia
 alias jupyterjl="julia -e 'using IJulia; notebook(dir=pwd())'"
