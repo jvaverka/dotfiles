@@ -26,7 +26,7 @@ else
 fi
 
 # weave julia literate files
-julia -O0 -e "
+julia --project -O0 -e "
   using Literate;
   Literate.markdown(\"$filename\", \"$outpath\", execute = true)
 "
