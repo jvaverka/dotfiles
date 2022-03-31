@@ -146,3 +146,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Starship Prompt
 eval "$(starship init bash)"
+
+# smarter cd
+eval "$(zoxide init bash)"
