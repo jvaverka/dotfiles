@@ -122,7 +122,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # cheat settings
-export EDITOR='lvim'
+export EDITOR='nvim'
 export CHEATCOLORS=true
 # terminal prompt
 export PS1="\[$(tput bold)\]\[\033[38;5;14m\][\[$(tput sgr0)\]\[\033[38;5;15m\]\u\[$(tput sgr0)\]\[\033[38;5;9m\]@\[$(tput sgr0)\]\[\033[38;5;15m\]\h\[$(tput bold)\]\[\033[38;5;14m\]]\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;10m\]λ\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\] \[$(tput sgr0)\]"
@@ -149,3 +149,6 @@ eval "$(starship init bash)"
 
 # smarter cd
 eval "$(zoxide init bash)"
+
+# nvim lsp
+export PATH="$HOME/.local/share/nvim/lspinstall/lua/:$PATH"
