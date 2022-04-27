@@ -55,6 +55,7 @@ alias ldpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 alias rn='date +"%T"'
 alias todate='date +"%d-%m-%Y"'
 alias today='date +"%A"'
+alias batperc='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 alias wttr='curl wttr.in/Gainesville+GA?u'       # normal (v1)
 alias wttrd='curl v2d.wttr.in/Gainesville+GA?u'  # data-rich (v2) nerd-font day
 alias wttre='curl v2.wttr.in/Gainesville+GA?u'   # data-rich (v2) emoji
