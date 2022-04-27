@@ -1,4 +1,5 @@
 # plugin install dir
+nvim/.config/nvim/plugin
 nvim/.config/nvim/session
 
 # cache files
