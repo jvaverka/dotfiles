@@ -1,19 +1,24 @@
--- Neovim
--- ========================
-require 'settings'
-require 'keys'
-require 'plugins'
-require 'lsp'
-require 'autocommands'
-
--- Vim Options
--- ========================
-vim.cmd [[
-	set nocompatible
-	syntax enable
-]]
-
--- Python Paths
--- ========================
-vim.g.python_host_prog = '$HOMEPATH\\miniconda3\\envs\\mypy2\\python.exe'
-vim.g.python3_host_prog = '$HOMEPATH\\miniconda3\\envs\\neovim\\python.exe'
+require "user.options"
+require "user.keymaps"
+require "user.plugins"
+require "user.colorscheme"
+require "user.cmp"
+require "user.lsp"
+require "user.telescope"
+require "user.treesitter"
+require "user.autopairs"
+require "user.comment"
+require "user.gitsigns"
+require "user.nvim-tree"
+require "user.bufferline"
+require "user.lualine"
+require "user.toggleterm"
+require "user.project"
+require "user.impatient"
+require "user.indentline"
+require "user.alpha"
+require "user.whichkey"
+require "user.autocommands"
+require "user.lastplace"
+require "user.neoscroll"
+require "user.zk"

@@ -1,0 +1,13 @@
+{
+  "protect": {
+    "prefix": "protect",
+    "body": [
+      "local ${1:status_ok}, ${2:name} = pcall(require, '${2}')",
+      "if not ${1} then",
+      "\tvim.notify('Could not load ${2}!')",
+      "\treturn",
+      "end"
+    ],
+    "description": "Protected call"
+  }
+}
