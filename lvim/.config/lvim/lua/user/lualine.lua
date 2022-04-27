@@ -59,7 +59,8 @@ M.config = function()
 
   -- Color table for highlights
   local theme = require "user.theme"
-  local colors = theme.colors.tokyonight_colors
+  -- local colors = theme.colors.tokyonight_colors
+  local colors = theme.current_colors()
   local mode_color = {
     n = colors.git.delete,
     i = colors.green,

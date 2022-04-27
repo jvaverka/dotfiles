@@ -1,0 +1,31 @@
+{
+  "due": {
+    "prefix": "due",
+    "body": [
+      "",
+      "## Due",
+      "",
+      "#${0:2022-04-01}",
+      ""
+    ]
+  },
+  "tag": {
+    "prefix": "tag",
+    "body": [
+      "",
+      "## Tags",
+      "",
+      "#${0:mytag}",
+      ""
+    ]
+  },
+  "task": {
+    "prefix": "task",
+    "body": [
+      "",
+      "## Tasks",
+      "",
+      "- [ ] ${0:task one}"
+    ]
+  }
+}

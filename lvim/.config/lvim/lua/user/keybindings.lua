@@ -23,6 +23,9 @@ M.config = function ()
   lvim.builtin.which_key.mappings["1"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/school/'}<cr>", "Masters"}
   lvim.builtin.which_key.mappings["2"] = { "<cmd>Telescope fd hidden=false search_dirs={'~/Repos/blog/'}<cr>", "Blog"}
   lvim.builtin.which_key.mappings["8"] = { "gqG", "80 Lines"}
+  if lvim.extras.nabla.active then
+    lvim.builtin.which_key.mappings["\\"] = { "<cmd>:lua require('nabla').popup()<cr>", "\\LaTeX" }
+  end
   if lvim.extras.matchup.active then
     lvim.builtin.which_key.mappings["?"] = { "<cmd>MatchupWhereAmI??<cr>", "Where am I?" }
   end

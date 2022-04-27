@@ -1,11 +1,26 @@
 local M = {}
 
 M.config = function ()
-  lvim.plugins = {
-		{
+    lvim.plugins = {
+    {
+      "savq/melange",
+      config = function ()
+        require("user.theme").melange()
+      end,
+      cond = function ()
+        local _time = os.date "*t"
+        return (_time.hour > 3 and _time.hour < 12)
+      end,
+      disable = not lvim.extras.fancy_theme.active,
+    },
+    {
       "folke/tokyonight.nvim",
       config = function ()
         require("user.theme").tokyonight()
+      end,
+      cond = function ()
+        local _time = os.date "*t"
+        return (_time.hour >= 12 or _time.hour <= 3)
       end,
       disable = not lvim.extras.fancy_theme.active,
     },
@@ -89,6 +104,10 @@ M.config = function ()
       disable = not lvim.extras.matchup.active,
     },
     {
+      "jbyuki/nabla.nvim",
+      disable = not lvim.extras.nabla.active,
+    },
+    {
       "karb94/neoscroll.nvim",
       config = function ()
         require("user.neoscroll").config()
@@ -96,13 +115,23 @@ M.config = function ()
       disable = not lvim.extras.neoscroll.active,
     },
     {
-      "rcarriga/nvim-notify",
-      event = "BufRead",
-      config = function ()
-        require("user.notify").config()
+      "AckslD/nvim-neoclip.lua",
+      requires = {
+        {'tami5/sqlite.lua', module = 'sqlite'},
+        {'nvim-telescope/telescope.nvim'},
+      },
+      config = function()
+        require('user.neoclip').config()
       end,
-      disable = not lvim.extras.notify.active,
     },
+    -- {
+    --   "rcarriga/nvim-notify",
+    --   event = "BufRead",
+    --   config = function ()
+    --     require("user.notify").config()
+    --   end,
+    --   disable = not lvim.extras.notify.active,
+    -- },
     {
       "vuki656/package-info.nvim",
       ft = "json",
@@ -208,6 +237,12 @@ M.config = function ()
         require "user.zepl"
       end,
       disable = not lvim.extras.zepl.active,
+    },
+    {
+      "mickael-menu/zk-nvim",
+      config = function ()
+        require("user.zk").config()
+      end,
     },
   }
 end

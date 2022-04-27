@@ -4,24 +4,12 @@ M.config = function ()
 
   -- Dashboard
   -- =========================================
-  lvim.builtin.dashboard.active = true
-  lvim.builtin.dashboard.custom_section["m"] = {
+  lvim.builtin.alpha.active = true
+  lvim.builtin.alpha.dashboard.section.buttons["m"] = {
     description = { "  Marks              " },
     command = "Telescope marks",
   }
-  lvim.builtin.dashboard.session_directory = vim.loop.os_homedir() .. "/.cache/lvim/sessions/"
-
-  -- LspInstall
-  -- =========================================
-  -- lvim.lang.markdown = {
-  --   formatters = { { exe = "prettier" } },
-  --   linters = { { exe = "markdownlint" } },
-  -- }
-  -- lvim.builtin.lspinstall.on_config_done = function()
-  --   lvim.lang.tailwindcss.lsp.setup.filetypes = { "markdown" }
-  --   lvim.lang.tailwindcss.lsp.active = true
-  --   require("lsp").setup "tailwindcss"
-  -- end
+  -- lvim.builtin.alpha.dashboard.config.sessions. = vim.loop.os_homedir() .. "/.cache/lvim/sessions/"
 
   -- NvimTree
   -- =========================================
@@ -70,6 +58,10 @@ M.config = function ()
   lvim.builtin.treesitter.highlight.enabled = true
   lvim.builtin.treesitter.matchup.enable = true
   lvim.builtin.treesitter.playground.enable = true
+
+  -- Snippets
+  -- =========================================
+  require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets" } }
 end
 
 return M
