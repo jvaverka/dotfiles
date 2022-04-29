@@ -158,4 +158,4 @@ export GEM_PATH="$GEM_HOM"
 export PATH="$HOME/.local/share/nvim/lspinstall/lua/:$PATH"
 
 # zk
-export ZK_NOTEBOOK_DIR="$HOME/Notes"
+export ZK_NOTEBOOK_DIR="$HOME/Repos/Zettelkasten/zettels"
