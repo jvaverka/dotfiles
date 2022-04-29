@@ -92,7 +92,6 @@ local mappings = {
   ["f"] = { "<cmd>Telescope find_files theme=dropdown previewer=false<cr>", "Find files", },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-  ["S"] = { "<cmd>Telescope spell_suggest<cr>", "Spell Help" },
   ["Z"] = { "<cmd>ZenMode<cr>", "Zen" },
 
   [","] = {
@@ -168,14 +167,15 @@ local mappings = {
   s = {
     name = "Search",
     b = { "<cmd>Telescope marks<cr>", "Bookmarks" },
-    c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
-    g = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-    h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+    c = { "<cmd>Telescope colorscheme<cr>", "Colorschemes" },
+    g = { "<cmd>Telescope git_branches<cr>", "Checkout Git Branches" },
+    h = { "<cmd>Telescope help_tags<cr>", "Help" },
     i = { "<cmd>Telescope media_files<cr>", "Images" },
-    m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-    o = { "<cmd>Telescope oldfiles<cr>", "Open Old File" },
-    r = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
+    m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+    o = { "<cmd>Telescope oldfiles<cr>", "Old Files" },
+    r = { "<cmd>Telescope registers<cr>", "Registers" },
+    s = { "<cmd>Telescope spell_suggest<cr>", "Spellings" },
     x = { "<cmd>Telescope commands<cr>", "Commands" },
   },
   t = {
