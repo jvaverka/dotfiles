@@ -25,8 +25,8 @@ ignore = [
 [extra]
 author = "Jacob"
 
-# Daily Journal Group
-# -------------------
+# Journal Group
+# -------------
 # https://github.com/mickael-menu/zk/blob/main/docs/daily-journal.md
 [group.journal]
 paths = ["Journal"]
