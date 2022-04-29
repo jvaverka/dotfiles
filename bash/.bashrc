@@ -159,3 +159,12 @@ export PATH="$HOME/.local/share/nvim/lspinstall/lua/:$PATH"
 
 # zk
 export ZK_NOTEBOOK_DIR="$HOME/Repos/Zettelkasten/zettels"
+
+# fontpreview
+export FONTPREVIEW_SEARCH_PROMPT="❯ "
+export FONTPREVIEW_SIZE=900x600
+export FONTPREVIEW_POSITION="+0+0"
+export FONTPREVIEW_FONT_SIZE=38
+export FONTPREVIEW_BG_COLOR="#ffffff"
+export FONTPREVIEW_FG_COLOR="#000000"
+export FONTPREVIEW_PREVIEW_TEXT="ABCDEFGHIJKLM\nNOPQRSTUVWXYZ\nabcdefghijklm\nnopqrstuvwxyz\n1234567890\n!@$\%(){}[]\n==>--> <= >= <--<==\n==>>--> == === |= != <--<==\n>>=>><<==<<\n</> .- && www || .= <>"
