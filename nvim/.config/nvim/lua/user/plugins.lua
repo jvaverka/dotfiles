@@ -59,7 +59,7 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
 
   -- Colorschemes
-  use "~/Repos/tokyonight.nvim"
+  use "folke/tokyonight.nvim"
   use "rose-pine/neovim"
   use "EdenEast/nightfox.nvim"
 
@@ -112,7 +112,12 @@ return packer.startup(function(use)
   })
 
   -- Folke
-  use "folke/todo-comments.nvim"
+  use {
+    "folke/todo-comments.nvim",
+    config = function ()
+        require("todo-comments").setup{}
+    end,
+  }
   use "folke/trouble.nvim"
   use "folke/twilight.nvim"
   use "folke/zen-mode.nvim"
@@ -127,6 +132,18 @@ return packer.startup(function(use)
     "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
     ft = "markdown",
+  }
+  use {
+      'wthollingsworth/pomodoro.nvim',
+      requires = 'MunifTanjim/nui.nvim',
+      config = function()
+        require('pomodoro').setup({
+          time_work = 25,
+          time_break_short = 5,
+          time_break_long = 20,
+          timers_to_long_break = 4
+        })
+      end
   }
 
   -- Automatically set up your configuration after cloning packer.nvim

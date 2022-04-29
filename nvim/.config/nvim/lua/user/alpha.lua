@@ -10,10 +10,10 @@ local space = {
 }
 
 function TableConcat(t1,t2)
-   for i=1,#t2 do
-      t1[#t1+1] = t2[i]
-   end
-   return t1
+  for i=1,#t2 do
+    t1[#t1+1] = t2[i]
+  end
+  return t1
 end
 
 local fortune_spaced = TableConcat(require'alpha.fortune'(), space)
@@ -26,7 +26,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("p", "  Find project", ":Telescope projects hidden=true <CR>"),
 	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
 	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
+	dashboard.button("c", "  Configuration", ":Telescope find_files hidden=true theme=dropdown previewer=false follow=true search_dirs={vim.fn.stdpath('config')} <CR>"),
 	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
 
