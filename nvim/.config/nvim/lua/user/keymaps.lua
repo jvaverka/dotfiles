@@ -51,16 +51,16 @@ keymap('n', 'n', 'nzzzv', opts)
 keymap('n', 'N', 'Nzzzv', opts)
 keymap('n', 'J', 'mzJ`z', opts)
 
--- Add undo break points
-keymap('n', ',', ',<c-g>u', opts)
-keymap('n', '.', '.<c-g>u', opts)
-keymap('n', '!', '!<c-g>u', opts)
-keymap('n', '?', '?<c-g>u', opts)
-
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
+
+-- Add undo break points
+keymap('i', ',', ',<c-g>u', opts)
+keymap('i', '.', '.<c-g>u', opts)
+keymap('i', '!', '!<c-g>u', opts)
+keymap('i', '?', '?<c-g>u', opts)
 
 -- Visual --
 -- Stay in indent mode
