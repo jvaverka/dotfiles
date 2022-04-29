@@ -81,10 +81,7 @@ local opts = {
 local mappings = {
   ["\\"] = { "<cmd>lua require'nabla'.popup()<cr>", "Nabla" },
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-  ["b"] = {
-    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Buffers",
-  },
+  ["b"] = { "<cmd>Telescope buffers theme=dropdown previewer=false<cr>", "Buffers", },
   ["d"] = { "mx0f[lrxg`x", "Do" },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
@@ -92,10 +89,7 @@ local mappings = {
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["H"] = { "<cmd>TSHighlightCapturesUnderCursor<CR>", "TS Highlight" },
-  ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Find files",
-  },
+  ["f"] = { "<cmd>Telescope find_files theme=dropdown previewer=false<cr>", "Find files", },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
   ["S"] = { "<cmd>Telescope spell_suggest<cr>", "Spell Help" },
