@@ -5,6 +5,8 @@ end
 
 local actions = require "telescope.actions"
 
+telescope.load_extension('media_files')
+
 telescope.setup {
   defaults = {
 
@@ -87,10 +89,9 @@ telescope.setup {
     -- builtin picker
   },
   extensions = {
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
+    media_files = {
+      filetypes = { "png", "webp", "jpg", "jpeg", "ttf", "otf", "pdf" },
+      find_cmd = "fd",
+    },
   },
 }

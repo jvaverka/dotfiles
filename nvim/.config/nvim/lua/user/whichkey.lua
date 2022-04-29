@@ -171,6 +171,7 @@ local mappings = {
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     g = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+    i = { "<cmd>Telescope media_files<cr>", "Images" },
     m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
     o = { "<cmd>Telescope oldfiles<cr>", "Open Old File" },
     r = { "<cmd>Telescope registers<cr>", "Registers" },
