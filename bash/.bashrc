@@ -150,5 +150,9 @@ eval "$(starship init bash)"
 # smarter cd
 eval "$(zoxide init bash)"
 
+# gem
+export GEM_HOME="$HOME/.gem"
+export GEM_PATH="$GEM_HOM"
+
 # nvim lsp
 export PATH="$HOME/.local/share/nvim/lspinstall/lua/:$PATH"
