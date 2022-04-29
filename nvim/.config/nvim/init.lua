@@ -22,3 +22,5 @@ require "user.autocommands"
 require "user.lastplace"
 require "user.neoscroll"
 require "user.zk"
+
+vim.g.python3_host_prog = "/home/jake/opt/anaconda3/envs/neovim/bin/python3.9"
