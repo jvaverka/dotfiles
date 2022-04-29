@@ -1,12 +1,16 @@
 [user]
-	email = jvaverka@protonmail.com
 	name = Jacob Vaverka
+	email = jvaverka@protonmail.com
 [core]
 	editor=nvim
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true  # use n and N to move between diff sections
+[diff]
+  colorMoved = default
 [alias]
-  ; don't use 'a' since I don't have 'peco' installed
-	; a = "!git status --short | peco | awk '{print $2}' | xargs git add"
-  ;
   a = add
   ; add conflicted file on merge
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
@@ -34,3 +38,4 @@
   type = cat-file -t
 [merge]
 	tool = meld
+  conflictstyle = diff3
