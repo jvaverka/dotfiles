@@ -73,7 +73,7 @@ keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Zk
-keymap("v", "<m-z>", ":'<,'>ZkNewFromTitleSelection { dir = vim.fn.expand('%:p:h') }<CR>", opts)
+keymap("v", "<m-n>", ":'<,'>:ZkNewFromTitleSelection { dir = vim.fn.expand('%:p:h') }<CR>", opts)
 
 -- Visual Block --
 -- Move text up and down
