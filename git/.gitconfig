@@ -1,15 +1,31 @@
 [user]
 	name = Jacob Vaverka
 	email = jvaverka@protonmail.com
+[init]
+  defaultBranch = main
 [core]
 	editor=nvim
+	longpaths = true
   pager = delta
 [interactive]
-  diffFilter = delta --color-only
+  diffFilter = delta --color-only --features=interactive
 [delta]
   navigate = true  # use n and N to move between diff sections
+  features = decorations
+[delta "interactive"]
+  keep-plus-minus-markers = false
+[delta "decorations"]
+  commit-decoration-style = blue ol
+  commit-style = raw
+  file-style = omit
+  hunk-header-decoration-style = blue box
+  hunk-header-file-style = red
+  hunk-header-line-number-style = "#067a00"
+  hunk-header-style = file line-number syntax
 [diff]
   colorMoved = default
+[credential "https://github.com"]
+  ; helper = !'C:\\Program Files (x86)\\GitHub CLI\\gh.exe' auth git-credential
 [alias]
   a = add
   ; add conflicted file on merge
@@ -22,7 +38,6 @@
   ci = commit
   co = checkout
   d = diff
-  df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
   dump = cat-file -p
   ; edit conflicted file on merge
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
