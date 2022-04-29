@@ -101,6 +101,13 @@ local mappings = {
   ["S"] = { "<cmd>Telescope spell_suggest<cr>", "Spell Help" },
   ["Z"] = { "<cmd>ZenMode<cr>", "Zen" },
 
+  [","] = {
+    name = "Pomodoro",
+    b = { "<cmd>PomodoroStart<cr>", "Begin" },
+    e = { "<cmd>PomodoroStop<cr>", "End" },
+    s = { "<cmd>PomodoroStatus<cr>", "Status" },
+  },
+
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
