@@ -59,7 +59,7 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
 
   -- Colorschemes
-  use "~/Repos/tokyonight.nvim"
+  use "folke/tokyonight.nvim"
   use "rose-pine/neovim"
   use "EdenEast/nightfox.nvim"
 
@@ -112,7 +112,12 @@ return packer.startup(function(use)
   })
 
   -- Folke
-  use "folke/todo-comments.nvim"
+  use {
+    "folke/todo-comments.nvim",
+    config = function ()
+        require("todo-comments").setup{}
+    end,
+  }
   use "folke/trouble.nvim"
   use "folke/twilight.nvim"
   use "folke/zen-mode.nvim"
