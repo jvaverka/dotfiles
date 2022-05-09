@@ -1,11 +1,9 @@
 # Week {{date now "%W"}} of {{date now "%Y"}}
 
-## Must Dos
+## Must Do
 
-- [ ] 
-- [ ] 
-- [ ] 
+- [ ]
 
-## Can Dos
+## Time Permitting
 
-- [ ] 
+- [ ]
