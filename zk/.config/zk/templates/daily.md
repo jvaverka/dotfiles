@@ -1,5 +1,5 @@
 # {{date now "long"}}
 
-## To Do
+## TODO
 
 - [ ]
