@@ -28,14 +28,22 @@ author = "Jacob"
 # Journal Group
 # -------------
 # https://github.com/mickael-menu/zk/blob/main/docs/daily-journal.md
-[group.journal]
-paths = ["Journal"]
+[group.daily]
+paths = ["Journal/Daily"]
 
-[group.journal.note]
+[group.daily.note]
 # %Y-%m-%d is actually the default format, so you could use {{date now}} instead.
 filename = "{{date now '%Y-%m-%d'}}"
 extension = "md"
-template = "journal.md"
+template = "daily.md"
+
+[group.weekly]
+paths = ["Journal/Weekly"]
+
+[group.weekly.note]
+filename = "{{date now '%Y-%W'}}"
+extension = "md"
+template = "weekly.md"
 
 # MARKDOWN SETTINGS
 # =================
@@ -126,8 +134,9 @@ hist = "zk list --format path --delimiter0 --quiet $@ | xargs -t -0 git log --pa
 # Edit this configuration file.
 conf = '$EDITOR "$ZK_NOTEBOOK_DIR/.zk/config.toml"'
 
-# Edit daily journal
-journal = 'zk new --no-input "$ZK_NOTEBOOK_DIR/Journal"'
+# Edit journal
+day = 'zk new --no-input "$ZK_NOTEBOOK_DIR/Journal/Daily"'
+wk = 'zk new --no-input "$ZK_NOTEBOOK_DIR/Journal/Weekly"'
 
 # Fuzzy find notes
 find = 'zk edit --interactive'
