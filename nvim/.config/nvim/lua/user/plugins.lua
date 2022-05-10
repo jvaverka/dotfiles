@@ -113,12 +113,7 @@ return packer.startup(function(use)
   })
 
   -- Folke
-  use {
-    "folke/todo-comments.nvim",
-    config = function ()
-        require("todo-comments").setup{}
-    end,
-  }
+  use "folke/todo-comments.nvim"
   use "folke/trouble.nvim"
   use "folke/twilight.nvim"
   use "folke/zen-mode.nvim"
