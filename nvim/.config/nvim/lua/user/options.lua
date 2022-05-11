@@ -32,7 +32,7 @@ local options = {
   wrap = false,                            -- display lines as one long line
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
-  guifont = "FiraCode Nerd Font:h10",               -- the font used in graphical neovim applications
+  guifont = "FiraCode Nerd Font:h14",               -- the font used in graphical neovim applications
 }
 
 vim.opt.shortmess:append "c"
@@ -53,4 +53,8 @@ vim.cmd [[
   autocmd Filetype markdown set tabstop=4
   autocmd Filetype markdown set softtabstop=4
   autocmd Filetype markdown set shiftwidth=4
+]]
+vim.cmd [[
+  let g:neovide_fullscreen=v:true
+  let g:neovide_remember_window_size = v:true
 ]]
