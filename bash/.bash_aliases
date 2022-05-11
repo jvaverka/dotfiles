@@ -46,6 +46,7 @@ alias lvi=lvim
 alias n=nvim
 alias nv=nvim
 alias nvi=nvim
+alias nvid=neovide
 alias v=vim
 alias vi=vim
 # new commands
