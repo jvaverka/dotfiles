@@ -1,0 +1,9 @@
+{
+  "chx": {
+    "prefix": "chx",
+    "body": [
+      "- [ ] "
+    ],
+    "description": "Check box list item"
+  }
+}
