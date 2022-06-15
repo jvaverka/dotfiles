@@ -53,6 +53,11 @@ vim.cmd [[
   autocmd Filetype markdown set tabstop=4
   autocmd Filetype markdown set softtabstop=4
   autocmd Filetype markdown set shiftwidth=4
+  autocmd Filetype julia set colorcolumn=92
+  autocmd Filetype julia set nofoldenable
+  autocmd Filetype julia set tabstop=4
+  autocmd Filetype julia set softtabstop=4
+  autocmd Filetype julia set shiftwidth=4
 ]]
 vim.cmd [[
   let g:neovide_fullscreen=v:true
