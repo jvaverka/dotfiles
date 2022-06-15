@@ -59,6 +59,7 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
 
   -- Colorschemes
+  use 'navarasu/onedark.nvim'
   use "folke/tokyonight.nvim"
   use "rose-pine/neovim"
   use "EdenEast/nightfox.nvim"

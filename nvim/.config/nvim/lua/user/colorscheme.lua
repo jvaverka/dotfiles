@@ -143,4 +143,63 @@ local function nightfox()
   vim.cmd("colorscheme nightfox")
 end
 
-tokyonight()
+local one = function ()
+  -- safely import theme
+  local status_ok, onedark = pcall(require, 'onedark')
+  if not status_ok then
+    vim.notify('Could not load onedark!')
+    return
+  end
+  -- set style by time
+  local variant = 'deep'
+  local istransparent = true
+  vim.o.background = 'dark'
+  local _time = os.date "*t"
+  if _time.hour >= 4 and _time.hour <= 10 then
+    variant =  'warmer'
+    istransparent = false
+  elseif _time.hour <= 14 then
+    variant =  'light'
+    istransparent = false
+    vim.o.background = 'light'
+  elseif _time.hour <= 17 then
+    variant = 'cool'
+    vim.o.background = 'dark'
+  end
+  -- configuration
+  onedark.setup {
+    style = 'deep', -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
+    transparent = istransparent,  -- Show/hide background
+    term_colors = true, -- Change terminal color as per the selected theme style
+    ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
+    cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
+    -- toggle theme style ---
+    toggle_style_key = '<leader>T', -- Default keybinding to toggle
+    toggle_style_list = {'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'}, -- List of styles to toggle between
+
+    -- Change code style ---
+    -- Options are italic, bold, underline, none
+    -- You can configure multiple style with comma seperated, For e.g., keywords = 'italic,bold'
+    code_style = {
+      comments = 'italic',
+      keywords = 'none',
+      functions = 'none',
+      strings = 'none',
+      variables = 'none'
+    },
+
+    -- Custom Highlights --
+    colors = {}, -- Override default colors
+    highlights = {}, -- Override highlight groups
+
+    -- Plugins Config --
+    diagnostics = {
+      darker = true, -- darker colors for diagnostic
+      undercurl = true,   -- use undercurl instead of underline for diagnostics
+      background = true,    -- use background color for virtual text
+    },
+  }
+  onedark.load()
+end
+
+one()
