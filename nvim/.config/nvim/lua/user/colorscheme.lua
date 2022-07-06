@@ -159,16 +159,14 @@ local one = function ()
     variant =  'warmer'
     istransparent = false
   elseif _time.hour <= 14 then
-    variant =  'light'
+    variant =  'cool'
     istransparent = false
-    vim.o.background = 'light'
   elseif _time.hour <= 17 then
-    variant = 'cool'
-    vim.o.background = 'dark'
+    variant = 'darker'
   end
   -- configuration
   onedark.setup {
-    style = 'deep', -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
+    style = variant, -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
     transparent = istransparent,  -- Show/hide background
     term_colors = true, -- Change terminal color as per the selected theme style
     ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
