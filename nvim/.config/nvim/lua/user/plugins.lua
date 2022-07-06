@@ -65,6 +65,9 @@ return packer.startup(function(use)
   use "rose-pine/neovim"
   use "EdenEast/nightfox.nvim"
 
+  -- Creations
+  use 'rktjmp/lush.nvim'
+
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
