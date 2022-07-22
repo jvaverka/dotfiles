@@ -81,7 +81,10 @@ local opts = {
 local mappings = {
   ["\\"] = { "<cmd>lua require'nabla'.popup()<cr>", "Nabla" },
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-  ["b"] = { "<cmd>Telescope buffers theme=dropdown previewer=false<cr>", "Buffers", },
+  ["b"] = {
+    "<cmd>Telescope buffers theme=dropdown previewer=false<cr>",
+    "Buffers",
+  },
   ["d"] = { "mx0f[lrxg`x", "Do" },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
@@ -89,9 +92,15 @@ local mappings = {
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["H"] = { "<cmd>TSHighlightCapturesUnderCursor<CR>", "TS Highlight" },
-  ["f"] = { "<cmd>Telescope find_files theme=dropdown previewer=false<cr>", "Find files", },
+  ["f"] = {
+    "<cmd>Telescope find_files theme=dropdown previewer=false<cr>",
+    "Find files",
+  },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
-  ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+  ["P"] = {
+    "<cmd>lua require('telescope').extensions.projects.projects()<cr>",
+    "Projects",
+  },
   ["Z"] = { "<cmd>ZenMode<cr>", "Zen" },
 
   [","] = {
@@ -191,7 +200,10 @@ local mappings = {
   Q = {
     name = "Persistence",
     d = { "<cmd>lua require('persistence').load()<cr>", "Load from Dir" },
-    l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Load Last" },
+    l = {
+      "<cmd>lua require('persistence').load({ last = true })<cr>",
+      "Load Last",
+    },
     s = { "<cmd>lua require('persistence').stop()<cr>", "Stop" },
   },
   z = {
@@ -203,7 +215,10 @@ local mappings = {
     l = { "<cmd>ZkLinks<cr>", "links" },
     n = { "<cmd>ZkNew { title = vim.fn.input('Title: ') }<cr>", "new" },
     p = { "<cmd>lua vim.lsp.buf.hover()<cr>", "peek" },
-    s = { "<cmd>ZkNotes { sort = { 'modified' }, match = vim.fn.input('Search: ') }<cr>", "search" },
+    s = {
+      "<cmd>ZkNotes { sort = { 'modified' }, match = vim.fn.input('Search: ') }<cr>",
+      "search",
+    },
     t = { "<cmd>ZkTags<cr>", "tags" },
   },
   [";"] = {

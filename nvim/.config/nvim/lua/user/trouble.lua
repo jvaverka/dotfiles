@@ -1,38 +1,41 @@
-local status_ok, _ = pcall(require, 'telescope.actions')
+local status_ok, _ = pcall(require, "telescope.actions")
 if not status_ok then
-  vim.notify('Could not load telescope.actions!')
+  vim.notify "Could not load telescope.actions!"
   return
 end
 
-local trouble_status_ok, trouble_telescope = pcall(require, 'trouble.providers.telescope')
+local trouble_status_ok, trouble_telescope = pcall(
+  require,
+  "trouble.providers.telescope"
+)
 if not trouble_status_ok then
-  vim.notify('Could not load trouble!')
+  vim.notify "Could not load trouble!"
   return
 end
 
-local telescope_status_ok, telescope = pcall(require, 'telescope')
+local telescope_status_ok, telescope = pcall(require, "telescope")
 if not telescope_status_ok then
-  vim.notify('Could not load telescope!')
+  vim.notify "Could not load telescope!"
   return
 end
 
 -- open telescope search results in Trouble
-telescope.setup {
+telescope.setup({
   defaults = {
     mappings = {
       i = { ["<c-t>"] = trouble_telescope.open_with_trouble },
       n = { ["<c-t>"] = trouble_telescope.open_with_trouble },
     },
   },
-}
+})
 
-local status_ok, trouble = pcall(require, 'trouble')
+local status_ok, trouble = pcall(require, "trouble")
 if not status_ok then
-  vim.notify('Could not load trouble!')
+  vim.notify "Could not load trouble!"
   return
 end
 
-trouble.setup {
+trouble.setup({
   {
     position = "bottom", -- position of the list can be: bottom, top, left, right
     height = 10, -- height of the trouble list when position is top or bottom
@@ -62,7 +65,7 @@ trouble.setup {
       open_folds = { "zR", "zr" }, -- open all folds
       toggle_fold = { "zA", "za" }, -- toggle fold of current file
       previous = "k", -- preview item
-      next = "j" -- next item
+      next = "j", -- next item
     },
     indent_lines = true, -- add an indent guide below the fold icons
     auto_open = false, -- automatically open the list when you have diagnostics
@@ -76,8 +79,8 @@ trouble.setup {
       warning = "",
       hint = "",
       information = "",
-      other = "﫠"
+      other = "﫠",
     },
-    use_diagnostic_signs = false -- enabling this will use the signs defined in your lsp client
-  }
-}
+    use_diagnostic_signs = false, -- enabling this will use the signs defined in your lsp client
+  },
+})

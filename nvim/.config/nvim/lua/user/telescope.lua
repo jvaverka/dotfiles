@@ -5,9 +5,9 @@ end
 
 local actions = require "telescope.actions"
 
-telescope.load_extension('media_files')
+telescope.load_extension "media_files"
 
-telescope.setup {
+telescope.setup({
   defaults = {
 
     prompt_prefix = " ",
@@ -94,4 +94,4 @@ telescope.setup {
       find_cmd = "fd",
     },
   },
-}
+})

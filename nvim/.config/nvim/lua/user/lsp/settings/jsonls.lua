@@ -1,22 +1,22 @@
 local function read_json(file_path)
-    local file = io.open(file_path, "r")
-    local table = vim.fn.json_decode(file:read("a"))
-    file.close()
+  local file = io.open(file_path, "r")
+  local table = vim.fn.json_decode(file:read "a")
+  file.close()
 
-    return table
+  return table
 end
 
 local default_schemas = nil
 local status_ok, nlspsettings = pcall(require, "nlspsettings")
 if status_ok then
-    local all_schemas = nlspsettings.get_default_schemas()
-    for _, schema in ipairs(all_schemas) do
-        if schema["fileMatch"][1] == "jsonls.json" then
-            local file_path = schema["url"]
-            default_schemas = read_json(file_path)
-            break
-        end
+  local all_schemas = nlspsettings.get_default_schemas()
+  for _, schema in ipairs(all_schemas) do
+    if schema["fileMatch"][1] == "jsonls.json" then
+      local file_path = schema["url"]
+      default_schemas = read_json(file_path)
+      break
     end
+  end
 end
 
 local schemas = {
@@ -184,10 +184,10 @@ local schemas = {
 }
 
 local function extend(tab1, tab2)
-    for _, value in ipairs(tab2) do
-        table.insert(tab1, value)
-    end
-    return tab1
+  for _, value in ipairs(tab2) do
+    table.insert(tab1, value)
+  end
+  return tab1
 end
 
 local extended_schemas = extend(schemas, default_schemas)
@@ -202,7 +202,7 @@ local opts = {
     commands = {
       Format = {
         function()
-            vim.lsp.buf.range_formatting({}, { 0, 0 }, { vim.fn.line "$", 0 })
+          vim.lsp.buf.range_formatting({}, { 0, 0 }, { vim.fn.line "$", 0 })
         end,
       },
     },

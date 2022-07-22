@@ -3,14 +3,14 @@ local fn = vim.fn
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = fn.system {
+  PACKER_BOOTSTRAP = fn.system({
     "git",
     "clone",
     "--depth",
     "1",
     "https://github.com/wbthomason/packer.nvim",
     install_path,
-  }
+  })
   print "Installing packer close and reopen Neovim..."
   vim.cmd [[packadd packer.nvim]]
 end
@@ -26,18 +26,18 @@ vim.cmd [[
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-  vim.notify('plugins.lua: Could not load Packer!')
+  vim.notify "plugins.lua: Could not load Packer!"
   return
 end
 
 -- Have packer use a popup window
-packer.init {
+packer.init({
   display = {
     open_fn = function()
-      return require("packer.util").float { border = "rounded" }
+      return require("packer.util").float({ border = "rounded" })
     end,
   },
-}
+})
 
 return packer.startup(function(use)
   -- Basic
@@ -60,13 +60,13 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
 
   -- Colorschemes
-  use 'navarasu/onedark.nvim'
+  use "navarasu/onedark.nvim"
   use "folke/tokyonight.nvim"
   use "rose-pine/neovim"
   use "EdenEast/nightfox.nvim"
 
   -- Creations
-  use 'rktjmp/lush.nvim'
+  use "rktjmp/lush.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -92,7 +92,7 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope-media-files.nvim"
 
   -- Treesitter
-  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
+  use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use "JoosepAlviste/nvim-ts-context-commentstring"
   use "nvim-treesitter/playground"
 
@@ -100,7 +100,7 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- Colorizer
-  use 'norcalli/nvim-colorizer.lua'
+  use "norcalli/nvim-colorizer.lua"
 
   -- Last place
   use "ethanholz/nvim-lastplace"
@@ -130,23 +130,23 @@ return packer.startup(function(use)
   -- Notes
   use "mickael-menu/zk-nvim"
   use "jbyuki/nabla.nvim"
-  use {
+  use({
     "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
     ft = "markdown",
-  }
-  use {
-      'wthollingsworth/pomodoro.nvim',
-      requires = 'MunifTanjim/nui.nvim',
-      config = function()
-        require('pomodoro').setup({
-          time_work = 25,
-          time_break_short = 5,
-          time_break_long = 20,
-          timers_to_long_break = 4
-        })
-      end
-  }
+  })
+  use({
+    "wthollingsworth/pomodoro.nvim",
+    requires = "MunifTanjim/nui.nvim",
+    config = function()
+      require("pomodoro").setup({
+        time_work = 25,
+        time_break_short = 5,
+        time_break_long = 20,
+        timers_to_long_break = 4,
+      })
+    end,
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

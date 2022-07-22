@@ -1,6 +1,6 @@
-local status_ok, zk = pcall(require, 'zk')
+local status_ok, zk = pcall(require, "zk")
 if not status_ok then
-  vim.notify('Could not load zk!')
+  vim.notify "Could not load zk!"
   return
 end
 zk.setup({

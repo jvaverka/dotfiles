@@ -40,16 +40,16 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>", opts)
 
 -- Easy CAPS
-keymap('n', '<m-U>', 'viwU', opts)
-keymap('n', '<m-u>', 'viwu', opts)
+keymap("n", "<m-U>", "viwU", opts)
+keymap("n", "<m-u>", "viwu", opts)
 
 -- Fast vertical split
-keymap('n', 'gv', ':vs<cr>', opts)
+keymap("n", "gv", ":vs<cr>", opts)
 
 -- Always keep cursor centered
-keymap('n', 'n', 'nzzzv', opts)
-keymap('n', 'N', 'Nzzzv', opts)
-keymap('n', 'J', 'mzJ`z', opts)
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+keymap("n", "J", "mzJ`z", opts)
 
 -- Insert --
 -- Press jk fast to enter
@@ -57,10 +57,10 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 
 -- Add undo break points
-keymap('i', ',', ',<c-g>u', opts)
-keymap('i', '.', '.<c-g>u', opts)
-keymap('i', '!', '!<c-g>u', opts)
-keymap('i', '?', '?<c-g>u', opts)
+keymap("i", ",", ",<c-g>u", opts)
+keymap("i", ".", ".<c-g>u", opts)
+keymap("i", "!", "!<c-g>u", opts)
+keymap("i", "?", "?<c-g>u", opts)
 
 -- Move text up and down
 keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -77,7 +77,12 @@ keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Zk
-keymap("v", "<m-n>", ":'<,'>:ZkNewFromTitleSelection { dir = vim.fn.expand('%:p:h') }<CR>", opts)
+keymap(
+  "v",
+  "<m-n>",
+  ":'<,'>:ZkNewFromTitleSelection { dir = vim.fn.expand('%:p:h') }<CR>",
+  opts
+)
 
 -- Visual Block --
 -- Move text up and down
@@ -95,4 +100,4 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Command --
 -- Can't stop won't stop
-keymap('c', 'w!!', 'w !sudo tee %', opts)
+keymap("c", "w!!", "w !sudo tee %", opts)

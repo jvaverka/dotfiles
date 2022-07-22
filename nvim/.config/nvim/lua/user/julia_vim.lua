@@ -1,6 +1,6 @@
 -- Unicode
 -- =========================================
-vim.g.latex_to_unicode_file_types = {"julia", "markdown"}
+vim.g.latex_to_unicode_file_types = { "julia", "markdown" }
 vim.g.latex_to_unicode_auto = false
 -- fix freeze when tab with no text
 vim.g.latex_to_unicode_tab = "off"
@@ -26,15 +26,15 @@ vim.g.julia_indent_align_funcargs = 1
 -- =========================================
 -- vim.g.julia_blocks = 1
 vim.g.julia_blocks_mappings = {
-	move_n = "]n",
-	move_N = "]e",
-	move_p = "[n",
-	move_P = "[e",
-	moveblock_n = "]]",
-	moveblock_N = "][",
-	moveblock_p = "[[",
-	moveblock_P = "[]",
-	select_a = "an",
-	select_i = "in",
-	whereami = "<space>jw",
+  move_n = "]n",
+  move_N = "]e",
+  move_p = "[n",
+  move_P = "[e",
+  moveblock_n = "]]",
+  moveblock_N = "][",
+  moveblock_p = "[[",
+  moveblock_P = "[]",
+  select_a = "an",
+  select_i = "in",
+  whereami = "<space>jw",
 }
