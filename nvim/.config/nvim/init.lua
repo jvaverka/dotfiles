@@ -23,5 +23,6 @@ require "user.lastplace"
 require "user.neoscroll"
 require "user.zk"
 require "user.todo"
+require "user.trouble"
 
 vim.g.python3_host_prog = "/home/jake/opt/anaconda3/envs/neovim/bin/python3.9"
