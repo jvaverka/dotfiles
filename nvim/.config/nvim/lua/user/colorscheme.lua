@@ -155,7 +155,7 @@ local one = function ()
   local istransparent = true
   vim.o.background = 'dark'
   local _time = os.date "*t"
-  if _time.hour >= 4 and _time.hour <= 10 then
+  if _time.hour <= 10 then
     variant =  'warmer'
     istransparent = false
   elseif _time.hour <= 14 then
